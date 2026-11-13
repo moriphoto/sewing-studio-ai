@@ -1,0 +1,4353 @@
+{
+  "generated": "2026-11-13T23:15:44.337Z",
+  "models": {
+    "bernette-b77": {
+      "links": [
+        {
+          "title": "bernette b77 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/7-Series/b77_2026/5020077_60A_04_web_manual_b77_2026-05_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b77 – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/7-Series/EN/5200077_00A_04_web_qsg_b77_EN_2023-06.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b77 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-77",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "controls",
+          "topic": "Front controls",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Overview front controls",
+          "ok": true
+        },
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Overview front",
+          "ok": true
+        },
+        {
+          "key": "back",
+          "topic": "Back panel",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Overview back",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Feed dog up/down",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 32,
+          "pdfIndex": 32,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Winding",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Inserting the bobbin",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "setup",
+          "topic": "Setup program",
+          "printed": 41,
+          "pdfIndex": 41,
+          "find": "Setup Program",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Selecting a stitch pattern",
+          "printed": 52,
+          "pdfIndex": 52,
+          "find": "Selecting a Stitch Pattern",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonholes (automatic)",
+          "printed": 81,
+          "pdfIndex": 81,
+          "find": "Sewing a Buttonhole Automatically",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning and oiling",
+          "printed": 89,
+          "pdfIndex": 89,
+          "find": "Maintenance and Cleaning",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 92,
+          "pdfIndex": 92,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 104
+    },
+    "bernette-b79": {
+      "links": [
+        {
+          "title": "bernette b79 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/7-Series/b79_2026/5020079_60A_04_web_manual_b79_2026-05_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b79 – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/7-Series/EN/5200079_10A_04_web_qsg_b79_EN_2023-01.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b79 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-79",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "controls",
+          "topic": "Front controls",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Overview Front Controls",
+          "ok": true
+        },
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Overview - Front",
+          "ok": true
+        },
+        {
+          "key": "back",
+          "topic": "Back panel",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Overview - Back Panel",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Feed dog up/down",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Raising or Lowering the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 32,
+          "pdfIndex": 32,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 35,
+          "pdfIndex": 35,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 40,
+          "pdfIndex": 40,
+          "find": "Winding the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Inserting the bobbin",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "setup",
+          "topic": "Setup program",
+          "printed": 44,
+          "pdfIndex": 44,
+          "find": "Setup Program",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Selecting a stitch pattern",
+          "printed": 60,
+          "pdfIndex": 60,
+          "find": "Selecting a Stitch Pattern",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonholes",
+          "printed": 88,
+          "pdfIndex": 88,
+          "find": "Buttonholes",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery module",
+          "printed": 107,
+          "pdfIndex": 107,
+          "find": "Attaching the Embroidery Module",
+          "ok": true
+        },
+        {
+          "key": "embfoot",
+          "topic": "Attaching the embroidery foot",
+          "printed": 108,
+          "pdfIndex": 108,
+          "find": "Attaching the Embroidery Foot",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Attaching the hoop",
+          "printed": 116,
+          "pdfIndex": 116,
+          "find": "Attaching the Hoop",
+          "ok": true
+        },
+        {
+          "key": "embroider",
+          "topic": "Embroidering (Start/Stop)",
+          "printed": 137,
+          "pdfIndex": 137,
+          "find": "Embroidering via the Button",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning and oiling",
+          "printed": 141,
+          "pdfIndex": 141,
+          "find": "Maintenance and Cleaning",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 144,
+          "pdfIndex": 144,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 182
+    },
+    "bernette-b70-deco": {
+      "links": [
+        {
+          "title": "bernette b70 DECO – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/7-Series/b70-DECO_2026/5020070_60A_04_web_manual_b70_2026-05_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b70 DECO – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/7-Series/EN/5200070_00A_04_web_qsg_b70_EN_2023-06.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette 70 DECO – product page",
+          "url": "https://www.bernette.com/en/models/bernette-70-deco",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "controls",
+          "topic": "Front controls",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Overview front controls",
+          "ok": true
+        },
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Overview front",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery module",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Attaching the Embroidery Module",
+          "ok": true
+        },
+        {
+          "key": "embfoot",
+          "topic": "Attaching the embroidery foot",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "Attaching the Embroidery Foot",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 33,
+          "pdfIndex": 33,
+          "find": "Winding",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Inserting the bobbin",
+          "printed": 35,
+          "pdfIndex": 35,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Attaching the hoop",
+          "printed": 41,
+          "pdfIndex": 41,
+          "find": "Attaching the Hoop",
+          "ok": true
+        },
+        {
+          "key": "setup",
+          "topic": "Embroidery settings (Setup)",
+          "printed": 44,
+          "pdfIndex": 44,
+          "find": "Embroidery Settings",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning and oiling",
+          "printed": 74,
+          "pdfIndex": 74,
+          "find": "Maintenance and Cleaning",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 77,
+          "pdfIndex": 77,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 108
+    },
+    "bernette-05-academy": {
+      "links": [
+        {
+          "title": "bernette 05 Academy – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/b05/2026/ACADEMY/5020205_30A_04_web_manual_b05_ACADEMY_2026-04_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b05 series – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/b05/EN/5200105_0_04_web_qsg_b05-series_EN_2023-06.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette 05 Academy – product page",
+          "url": "https://www.bernette.com/en/models/bernette-05-academy",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Overview Front",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Feed dog up/down",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Raising or Lowering the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Winding",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Inserting the bobbin",
+          "printed": 33,
+          "pdfIndex": 33,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Stitch width and length",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Setting the Stitch Width",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Sewing a buttonhole automatically",
+          "printed": 62,
+          "pdfIndex": 62,
+          "find": "Sewing a Buttonhole Automatically",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning and oiling",
+          "printed": 68,
+          "pdfIndex": 68,
+          "find": "Maintenance and Cleaning",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 72,
+          "pdfIndex": 72,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 78
+    },
+    "bernette-b64-airlock": {
+      "links": [
+        {
+          "title": "bernette b64 AIRLOCK – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/b64-AIRLOCK/2026/5040064_20A_04_web_manual_b64_2026-03_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b64 AIRLOCK – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/b64-AIRLOCK/2026/5400064_20A_04_web_qsg_b64_2026-10_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Front view and parts",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Front view",
+          "ok": true
+        },
+        {
+          "key": "looperarea",
+          "topic": "Looper area overview",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Overview - Looper area",
+          "ok": true
+        },
+        {
+          "key": "threadingarea",
+          "topic": "Threading area overview",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Overview Threading area",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "knife",
+          "topic": "Knife on/off",
+          "printed": 40,
+          "pdfIndex": 40,
+          "find": "Knife «On/Off»",
+          "ok": true
+        },
+        {
+          "key": "width",
+          "topic": "Cutting width / stitch width",
+          "printed": 41,
+          "pdfIndex": 41,
+          "find": "Setting the Cutting Width",
+          "ok": true
+        },
+        {
+          "key": "length",
+          "topic": "Stitch length",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Setting the Stitch Length",
+          "ok": true
+        },
+        {
+          "key": "rolled",
+          "topic": "Rolled hem lever N/R",
+          "printed": 43,
+          "pdfIndex": 43,
+          "find": "Rolled Hem Selection Lever",
+          "ok": true
+        },
+        {
+          "key": "pressure",
+          "topic": "Presser-foot pressure",
+          "printed": 44,
+          "pdfIndex": 44,
+          "find": "Setting the Presser Foot Pressure",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 45,
+          "pdfIndex": 45,
+          "find": "Thread Tension",
+          "ok": true
+        },
+        {
+          "key": "diff",
+          "topic": "Differential feed",
+          "printed": 45,
+          "pdfIndex": 45,
+          "find": "Adjusting the Differential Feed",
+          "ok": true
+        },
+        {
+          "key": "prep",
+          "topic": "Preparing for threading",
+          "printed": 50,
+          "pdfIndex": 50,
+          "find": "Preparing for Threading",
+          "ok": true
+        },
+        {
+          "key": "needles",
+          "topic": "Threading the needles",
+          "printed": 51,
+          "pdfIndex": 51,
+          "find": "Needle Threads",
+          "ok": true
+        },
+        {
+          "key": "loopers",
+          "topic": "Threading the loopers (air)",
+          "printed": 53,
+          "pdfIndex": 53,
+          "find": "Threading the Looper Thread",
+          "ok": true
+        },
+        {
+          "key": "change",
+          "topic": "Changing thread",
+          "printed": 56,
+          "pdfIndex": 56,
+          "find": "Changing the Thread",
+          "ok": true
+        },
+        {
+          "key": "test",
+          "topic": "Sewing test and optimising",
+          "printed": 58,
+          "pdfIndex": 58,
+          "find": "Stitch Optimization",
+          "ok": true
+        },
+        {
+          "key": "secure",
+          "topic": "Securing overlock stitches",
+          "printed": 69,
+          "pdfIndex": 69,
+          "find": "Securing Overlock Stitches",
+          "ok": true
+        },
+        {
+          "key": "clean",
+          "topic": "Cleaning the looper area",
+          "printed": 77,
+          "pdfIndex": 77,
+          "find": "Cleaning the Looper Area",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 79,
+          "pdfIndex": 79,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 84
+    },
+    "janome-5060-qdc": {
+      "links": [
+        {
+          "title": "Janome UK – 5060QDC model page",
+          "url": "https://www.janome.co.uk/model-5060qdc",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Janome 5060QDC – Instruction book (PDF, English)",
+          "url": "https://www.janome.ca/wp-content/uploads/2025/02/inst_book-5060qdc-en.pdf",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        }
+      ],
+      "pages": []
+    },
+    "janome-sewist-725s": {
+      "links": [
+        {
+          "title": "Janome Sewist 725S – product page (janome.com)",
+          "url": "https://www.janome.com/product/sewist-725s/",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        },
+        {
+          "title": "Janome Sewist 725S – Instruction book (PDF, English)",
+          "url": "https://www.janome.ca/wp-content/uploads/2025/03/inst_book-sewist_725s-en.pdf",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        }
+      ],
+      "pages": []
+    },
+    "janome-mylock-454d": {
+      "links": [
+        {
+          "title": "Janome MyLock 454D Sailing Line – product page (janome.com)",
+          "url": "https://www.janome.com/product/mylock-454d-sailing-line/",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        },
+        {
+          "title": "Janome MyLock 454D – Instruction book (PDF, English)",
+          "url": "https://www.janome.ca/wp-content/uploads/2025/03/inst_book-mylock454d.pdf",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        }
+      ],
+      "pages": []
+    },
+    "brother-innov-is-f580": {
+      "links": [
+        {
+          "title": "Brother Innov-is F580 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102507/888_k10_l11_l12_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is F580 – Quick Reference Guide (PDF)",
+          "url": "https://download.brother.com/welcome/doch102510/888_k10_l11_l12_qg01endefrnlitesptbrru.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is F580 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovf580euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is F580 – product page",
+          "url": "https://sewingcraft.brother.eu/en/products/machines/combination-machines/combination-machines/innov-is-f580",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 9,
+          "pdfIndex": 11,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "controls",
+          "topic": "Operation buttons",
+          "printed": 10,
+          "pdfIndex": 12,
+          "find": "Operation buttons",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 21,
+          "pdfIndex": 23,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 23,
+          "pdfIndex": 25,
+          "find": "Installing the bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 25,
+          "pdfIndex": 27,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 29,
+          "pdfIndex": 31,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 30,
+          "pdfIndex": 32,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "cutter",
+          "topic": "Automatic thread cutting",
+          "printed": 38,
+          "pdfIndex": 40,
+          "find": "Automatic thread cutting",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 55,
+          "pdfIndex": 57,
+          "find": "Buttonhole sewing",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery unit",
+          "printed": 78,
+          "pdfIndex": 80,
+          "find": "embroidery unit",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Attaching the embroidery frame",
+          "printed": 82,
+          "pdfIndex": 84,
+          "find": "embroidery frame",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the race",
+          "printed": 103,
+          "pdfIndex": 105,
+          "find": "Cleaning the race",
+          "ok": true
+        }
+      ],
+      "pdfPages": 124
+    },
+    "brother-lx25": {
+      "links": [
+        {
+          "title": "Brother LX25 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch000850/lx25ug01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother LX25 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manuallist.aspx?c=gb&flang=English&lang=en&prod=hf_lx25euk&type2=69&type3=626",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother LX25 – product page",
+          "url": "https://sewingcraft.brother.eu/en/products/machines/sewing-machines/beginner-sewing-machines/lx25",
+          "http": 403,
+          "ok": false,
+          "blockedExpected": true
+        }
+      ],
+      "pages": [
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 7,
+          "pdfIndex": 8,
+          "find": "Replacing the needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 8,
+          "pdfIndex": 9,
+          "find": "Changing the presser foot",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 12,
+          "pdfIndex": 13,
+          "find": "Winding the bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Lower threading (bobbin)",
+          "printed": 14,
+          "pdfIndex": 15,
+          "find": "Lower threading",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 16,
+          "pdfIndex": 17,
+          "find": "Upper threading",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 26,
+          "pdfIndex": 27,
+          "find": "tension",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning / maintenance",
+          "printed": 40,
+          "pdfIndex": 41,
+          "find": "Cleaning",
+          "ok": true
+        }
+      ],
+      "pdfPages": 48
+    },
+    "bernette-05-crafter": {
+      "links": [
+        {
+          "title": "bernette 05 Crafter – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/b05/2026/CRAFTER/5020105_30A_04_web_manual_b05_CRAFTER_2026-04_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b05 series – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/b05/EN/5200105_0_04_web_qsg_b05-series_EN_2023-06.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette 05 Crafter – product page",
+          "url": "https://www.bernette.com/en/models/bernette-05-crafter",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Overview Front",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Feed dog up/down",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Raising or Lowering the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 21,
+          "pdfIndex": 21,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Winding the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Inserting the bobbin",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Stitch width and length",
+          "printed": 35,
+          "pdfIndex": 35,
+          "find": "Setting the Stitch Width",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Sewing a buttonhole automatically",
+          "printed": 60,
+          "pdfIndex": 60,
+          "find": "Sewing a Buttonhole Automatically",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning and oiling",
+          "printed": 66,
+          "pdfIndex": 66,
+          "find": "Maintenance and Cleaning",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 70,
+          "pdfIndex": 70,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 76
+    },
+    "bernette-b33": {
+      "links": [
+        {
+          "title": "bernette b33 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/3-Series/b33_2026/5060003_00A_04_web_b33_2026-01_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b33 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-33",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (parts)",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "Names of Parts",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 9,
+          "pdfIndex": 9,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Changing the needle",
+          "ok": true
+        },
+        {
+          "key": "spool",
+          "topic": "Spool pins and bobbin case",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Removing or Inserting the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Winding the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Threading the bobbin case",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Threading the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the machine (upper)",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Threading the Machine",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Correct tension",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Selecting stitch and length",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Turn the stitch pattern selector knob",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Lowering / raising the feed dog",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Lowering and raising the feed dog",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Four-step buttonhole",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Four-step buttonhole",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the bobbin case and shuttle race",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "Cleaning the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 32
+    },
+    "bernette-b35": {
+      "links": [
+        {
+          "title": "bernette b35 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/3-Series/b35_2026/5060005_00A_04_web_b35_2026-01_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b35 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-35",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (parts)",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "Names of Parts",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Changing the needle",
+          "ok": true
+        },
+        {
+          "key": "spool",
+          "topic": "Spool pins and bobbin case",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Removing or Inserting the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Winding the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Threading the bobbin case",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Threading the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the machine (upper)",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Threading the Machine",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Correct tension",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Selecting stitch, length and width",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Set the stitch width knob",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Lowering / raising the feed dog",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Lowering and raising the feed dog",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Automatic buttonhole",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Automatic Buttonhole",
+          "ok": true
+        },
+        {
+          "key": "rolled",
+          "topic": "Rolled hem",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "Rolled Hem",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the bobbin case and shuttle race",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Cleaning the Bobbin Case",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 33,
+          "pdfIndex": 33,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 38
+    },
+    "bernette-b37": {
+      "links": [
+        {
+          "title": "bernette b37 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/3-Series/b37_2026/5060007_00A_04_web_b37_2026-01_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b37 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-37",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (parts)",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "Names of Parts",
+          "ok": true
+        },
+        {
+          "key": "buttons",
+          "topic": "Machine operating buttons",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Machine Operating Buttons",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Dropping / raising the feed dog",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Dropping or Raising the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Changing the needle",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding and inserting the bobbin",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Bobbin Winding and Inserting",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the machine",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Threading the Machine",
+          "ok": true
+        },
+        {
+          "key": "threader",
+          "topic": "Needle threader",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Needle Threader",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "LCD display",
+          "printed": 21,
+          "pdfIndex": 21,
+          "find": "LCD display",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Adjusting the Thread Tension for a Straight Stitch",
+          "ok": true
+        },
+        {
+          "key": "straight",
+          "topic": "Straight stitch sewing",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Straight Stitch sewing",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonholes",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Various kinds of Buttonholes",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the hook race and feed dog",
+          "printed": 51,
+          "pdfIndex": 51,
+          "find": "Cleaning the Hook Race and Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 53,
+          "pdfIndex": 53,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 58
+    },
+    "bernette-b38": {
+      "links": [
+        {
+          "title": "bernette b38 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/3-Series/b38_2026/5060008.0.04_web_b38_EN_2026-01.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b38 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-38",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (parts)",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "Names of Parts",
+          "ok": true
+        },
+        {
+          "key": "buttons",
+          "topic": "Machine operating buttons",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Machine Operating Buttons",
+          "ok": true
+        },
+        {
+          "key": "touch",
+          "topic": "Touch panel and LCD",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Touch Panel",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "feed",
+          "topic": "Dropping / raising the feed dog",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Dropping or Raising the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding and inserting the bobbin",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Bobbin Winding and Inserting",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the machine",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Threading the Machine",
+          "ok": true
+        },
+        {
+          "key": "select",
+          "topic": "Pattern selection",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Pattern Selection",
+          "ok": true
+        },
+        {
+          "key": "mode",
+          "topic": "Setting mode",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Setting Mode",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Adjusting the Thread Tension for a Straight Stitch",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonholes",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Round-End Buttonhole",
+          "ok": true
+        },
+        {
+          "key": "letters",
+          "topic": "Programming letters",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Programming Letters",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care of your machine",
+          "printed": 66,
+          "pdfIndex": 66,
+          "find": "CARE OF YOUR MACHINE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 68,
+          "pdfIndex": 68,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 72
+    },
+    "bernette-08": {
+      "links": [
+        {
+          "title": "bernette 08 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/b08/2026/Neu/5060800_30A_04_web_manual_b08_2026-04_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette 08 – Quick Start Guide (PDF)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/Quick-Start-Guide/b08/5600800_00A_04_web_qsg_b08series_EN_2024-03.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette 08 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-08-straight-stitch",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Machine overview (front)",
+          "printed": 8,
+          "pdfIndex": 8,
+          "find": "Overview",
+          "ok": true
+        },
+        {
+          "key": "knee",
+          "topic": "Knee lifter",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Knee Lifter",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Winding the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Threading the bobbin thread",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Threading the Bobbin Thread",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Threading the upper thread",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Threading the Upper Thread",
+          "ok": true
+        },
+        {
+          "key": "threader",
+          "topic": "Needle threader",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Needle Threader",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Adjusting the lower thread tension",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Adjusting the Lower Thread Tension",
+          "ok": true
+        },
+        {
+          "key": "length",
+          "topic": "Stitch length",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Stitch Length",
+          "ok": true
+        },
+        {
+          "key": "pressure",
+          "topic": "Presser foot pressure",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "Presser Foot Pressure",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the feed dog and hook",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Cleaning the Feed Dog",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 42
+    },
+    "bernette-funlock-b44": {
+      "links": [
+        {
+          "title": "bernette Funlock b44 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/4-Series/2026/b44/5040005_00C_04_web_manual_b44_2026-10_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette Funlock b44 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-44-funlock",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "NAME OF PARTS",
+          "ok": true
+        },
+        {
+          "key": "looper",
+          "topic": "Opening the looper cover",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "HOW TO OPEN LOOPER",
+          "ok": true
+        },
+        {
+          "key": "knife",
+          "topic": "Disengaging the upper knife",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "HOW TO DISENGAGE UPPER KNIFE",
+          "ok": true
+        },
+        {
+          "key": "ulc",
+          "topic": "Upper looper converter (ULC)",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "UPPER LOOPER CONVERTER",
+          "ok": true
+        },
+        {
+          "key": "needleschange",
+          "topic": "Removing and inserting needles",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "HOW TO REMOVE AND INSERT",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Stitch overview",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "STITCH OVERVIEW",
+          "ok": true
+        },
+        {
+          "key": "prep",
+          "topic": "Threading diagram and colour code",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Tension Color Code",
+          "ok": true
+        },
+        {
+          "key": "upperlooper",
+          "topic": "Threading the upper looper",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Threading the Upper Looper (Blue)",
+          "ok": true
+        },
+        {
+          "key": "lowerlooper",
+          "topic": "Threading the lower looper",
+          "printed": 21,
+          "pdfIndex": 21,
+          "find": "Threading the Lower Looper (Red)",
+          "ok": true
+        },
+        {
+          "key": "needles",
+          "topic": "Threading the needles",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Threading the Overlock Right Needle",
+          "ok": true
+        },
+        {
+          "key": "length",
+          "topic": "Stitch length and seam width",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Stitch lenght dial",
+          "ok": true
+        },
+        {
+          "key": "pressure",
+          "topic": "Presser-foot pressure",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "The presser foot pressure",
+          "ok": true
+        },
+        {
+          "key": "diff",
+          "topic": "Differential feed",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "DIFFERENTIAL FEED",
+          "ok": true
+        },
+        {
+          "key": "test",
+          "topic": "Chaining off and test sewing",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "CHAINING OFF",
+          "ok": true
+        },
+        {
+          "key": "rolled",
+          "topic": "Rolled hem",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "HOW TO SEW A ROLLED HEM",
+          "ok": true
+        },
+        {
+          "key": "clean",
+          "topic": "Cleaning and oiling",
+          "printed": 48,
+          "pdfIndex": 48,
+          "find": "MACHINE MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 52,
+          "pdfIndex": 52,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        }
+      ],
+      "pdfPages": 56
+    },
+    "bernette-funlock-b42": {
+      "links": [
+        {
+          "title": "bernette Funlock b42 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/4-Series/2026/b42/5040003_00C_04_web_manual_b42_2026-10_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette Funlock b42 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-42-funlock",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "looper",
+          "topic": "Opening the looper cover",
+          "printed": 9,
+          "pdfIndex": 9,
+          "find": "HOW TO OPEN LOOPER",
+          "ok": true
+        },
+        {
+          "key": "needleschange",
+          "topic": "Removing and inserting needles",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "HOW TO REMOVE AND INSERT NEEDLES",
+          "ok": true
+        },
+        {
+          "key": "stitches",
+          "topic": "Stitch overview",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "STITCH OVERVIEW",
+          "ok": true
+        },
+        {
+          "key": "cover_prep",
+          "topic": "Threading diagrams and colour code",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Tension Color Code",
+          "ok": true
+        },
+        {
+          "key": "cover_looper",
+          "topic": "Threading the looper (violet)",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Coverstitch Looper (Violet)",
+          "ok": true
+        },
+        {
+          "key": "cover_needles",
+          "topic": "Threading the right needle (blue)",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Right Coverstitch Needle",
+          "ok": true
+        },
+        {
+          "key": "cover_centre",
+          "topic": "Threading the centre needle (green)",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Threading the Center Coverstitch",
+          "ok": true
+        },
+        {
+          "key": "length",
+          "topic": "Stitch length and foot pressure",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Stitch lenght dial",
+          "ok": true
+        },
+        {
+          "key": "diff",
+          "topic": "Differential feed",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "Gathered Coverstitch",
+          "ok": true
+        },
+        {
+          "key": "chain",
+          "topic": "Chainstitch",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "2–Thread Chainstitch",
+          "ok": true
+        },
+        {
+          "key": "cover_sew",
+          "topic": "Coverstitch set-up",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "HOW TO SEW A COVERSTITCH",
+          "ok": true
+        },
+        {
+          "key": "secure",
+          "topic": "Securing the seam end",
+          "printed": 32,
+          "pdfIndex": 32,
+          "find": "SECURING THE SEAM END",
+          "ok": true
+        },
+        {
+          "key": "clean",
+          "topic": "Cleaning and oiling",
+          "printed": 33,
+          "pdfIndex": 33,
+          "find": "Cleaning the Machine",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 36,
+          "pdfIndex": 36,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        },
+        {
+          "key": "spec",
+          "topic": "Technical summary",
+          "printed": 38,
+          "pdfIndex": 38,
+          "find": "Technical Summary",
+          "ok": true
+        }
+      ],
+      "pdfPages": 40
+    },
+    "bernette-funlock-b48": {
+      "links": [
+        {
+          "title": "bernette Funlock b48 – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/4-Series/2026/b48/5040007_00C_04_web_manual_b48_2026-10_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette Funlock b48 – product page",
+          "url": "https://www.bernette.com/en/models/bernette-48-funlock",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "looper",
+          "topic": "Opening the looper cover",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "HOW TO OPEN LOOPER",
+          "ok": true
+        },
+        {
+          "key": "knife",
+          "topic": "Disengaging the upper knife",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "HOW TO DISENGAGE UPPER KNIFE",
+          "ok": true
+        },
+        {
+          "key": "chart",
+          "topic": "Threading chart summary",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Threading Chart Summary",
+          "ok": true
+        },
+        {
+          "key": "upperlooper",
+          "topic": "Threading the upper looper",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Threading the Upper Looper (Blue)",
+          "ok": true
+        },
+        {
+          "key": "lowerlooper",
+          "topic": "Threading the lower looper",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Threading the Lower Looper (Red)",
+          "ok": true
+        },
+        {
+          "key": "cover_looper",
+          "topic": "Threading the chain / cover looper",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Coverstitch Looper (Violet)",
+          "ok": true
+        },
+        {
+          "key": "needles",
+          "topic": "Threading the right needle",
+          "printed": 27,
+          "pdfIndex": 27,
+          "find": "Threading the Overlock Right Needle",
+          "ok": true
+        },
+        {
+          "key": "cover_needles",
+          "topic": "Threading the coverstitch needles",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Threading the Coverstitch Needles",
+          "ok": true
+        },
+        {
+          "key": "length",
+          "topic": "Stitch length",
+          "printed": 36,
+          "pdfIndex": 36,
+          "find": "Stitch lenght dial",
+          "ok": true
+        },
+        {
+          "key": "pressure",
+          "topic": "Presser-foot pressure",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Presser foot pressure wheel",
+          "ok": true
+        },
+        {
+          "key": "diff",
+          "topic": "Differential feed",
+          "printed": 38,
+          "pdfIndex": 38,
+          "find": "Gathered Overlock",
+          "ok": true
+        },
+        {
+          "key": "cover_convert",
+          "topic": "Coverstitch machine set-up",
+          "printed": 52,
+          "pdfIndex": 52,
+          "find": "HOW TO SEW A Coverstitch",
+          "ok": true
+        },
+        {
+          "key": "cover_sew",
+          "topic": "Coverstitch start and end of seam",
+          "printed": 53,
+          "pdfIndex": 53,
+          "find": "chaining-off at the end of sewing",
+          "ok": true
+        },
+        {
+          "key": "secure",
+          "topic": "Securing the seam end",
+          "printed": 56,
+          "pdfIndex": 56,
+          "find": "Securing the seam end",
+          "ok": true
+        },
+        {
+          "key": "rolled",
+          "topic": "Rolled hem",
+          "printed": 58,
+          "pdfIndex": 58,
+          "find": "Additional information about rolled hemming",
+          "ok": true
+        },
+        {
+          "key": "clean",
+          "topic": "Cleaning and oiling",
+          "printed": 67,
+          "pdfIndex": 67,
+          "find": "Cleaning The Machine",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 72,
+          "pdfIndex": 72,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        },
+        {
+          "key": "spec",
+          "topic": "Technical summary",
+          "printed": 74,
+          "pdfIndex": 74,
+          "find": "Technical Summary",
+          "ok": true
+        }
+      ],
+      "pdfPages": 76
+    },
+    "bernette-b68-airlock": {
+      "links": [
+        {
+          "title": "bernette b68 AIRLOCK – User Manual (PDF, English)",
+          "url": "https://www.bernette.com/assets/uploads/general/Downloads/User-Manual/b68-AIRLOCK/2026/5040068_10A_04_web_manual_b68_2026-03_EN.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "bernette b68 AIRLOCK – product page",
+          "url": "https://www.bernette.com/en/models/bernette-68-airlock",
+          "http": 200,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Overview – front",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Overview - Front",
+          "ok": true
+        },
+        {
+          "key": "looperarea",
+          "topic": "Overview – looper area",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Overview - Looper Area",
+          "ok": true
+        },
+        {
+          "key": "threadarea",
+          "topic": "Overview – threading area",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Overview - Threading Area",
+          "ok": true
+        },
+        {
+          "key": "acc",
+          "topic": "Included accessories",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Included Accessories",
+          "ok": true
+        },
+        {
+          "key": "insert",
+          "topic": "Knife cover and coverstitch inserts",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Removing/Attaching the Knife Cover Insert",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Changing the needle",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Changing the Needle",
+          "ok": true
+        },
+        {
+          "key": "cover_convert",
+          "topic": "Preparing for overlock or cover/chainstitch",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Preparing the Machine for Cover",
+          "ok": true
+        },
+        {
+          "key": "knife",
+          "topic": "Knife on/off",
+          "printed": 43,
+          "pdfIndex": 43,
+          "find": "Setting the Cutting Width",
+          "ok": true
+        },
+        {
+          "key": "mtc",
+          "topic": "mtc micro thread control",
+          "printed": 47,
+          "pdfIndex": 47,
+          "find": "Setting the mtc",
+          "ok": true
+        },
+        {
+          "key": "pressure",
+          "topic": "Presser-foot pressure",
+          "printed": 47,
+          "pdfIndex": 47,
+          "find": "Presser Foot Pressure",
+          "ok": true
+        },
+        {
+          "key": "diff",
+          "topic": "Differential feed",
+          "printed": 49,
+          "pdfIndex": 49,
+          "find": "Adjusting the Differential Feed",
+          "ok": true
+        },
+        {
+          "key": "prep",
+          "topic": "Preparing for threading",
+          "printed": 53,
+          "pdfIndex": 53,
+          "find": "Preparing for Threading",
+          "ok": true
+        },
+        {
+          "key": "needles",
+          "topic": "Threading the needles",
+          "printed": 54,
+          "pdfIndex": 54,
+          "find": "Needle Threads",
+          "ok": true
+        },
+        {
+          "key": "loopers",
+          "topic": "Threading the loopers (air)",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Threading the Looper Thread",
+          "ok": true
+        },
+        {
+          "key": "change",
+          "topic": "Changing thread",
+          "printed": 62,
+          "pdfIndex": 62,
+          "find": "Changing the Thread",
+          "ok": true
+        },
+        {
+          "key": "test",
+          "topic": "Sewing tests and stitch optimisation",
+          "printed": 64,
+          "pdfIndex": 64,
+          "find": "Stitch Optimization",
+          "ok": true
+        },
+        {
+          "key": "clean",
+          "topic": "Cleaning the looper area",
+          "printed": 89,
+          "pdfIndex": 89,
+          "find": "Cleaning the Looper Area",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 92,
+          "pdfIndex": 92,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "spec",
+          "topic": "Technical specifications",
+          "printed": 95,
+          "pdfIndex": 95,
+          "find": "Technical Specifications",
+          "ok": true
+        }
+      ],
+      "pdfPages": 96
+    },
+    "brother-hf37": {
+      "links": [
+        {
+          "title": "Brother HF37 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch000926/888x36_x38_om03en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother HF37 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_hf37euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "The main parts",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "THE MAIN PARTS",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Checking and replacing the needle",
+          "printed": 9,
+          "pdfIndex": 9,
+          "find": "replacing the needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Presser foot installation",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Presser foot installation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding the bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Lower threading (bobbin)",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Lower threading",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Upper threading",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Making a buttonhole",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Making a buttonhole",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Maintenance",
+          "printed": 44,
+          "pdfIndex": 44,
+          "find": "MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 46,
+          "pdfIndex": 46,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        }
+      ],
+      "pdfPages": 52
+    },
+    "brother-innov-is-15": {
+      "links": [
+        {
+          "title": "Brother Innov-is 15 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch000453/nv1015ns10ug05en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is 15 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inov15euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "controls",
+          "topic": "Operation panel",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Operation panel",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Winding the bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Installing the bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Upper threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 33,
+          "pdfIndex": 33,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Maintenance",
+          "printed": 83,
+          "pdfIndex": 83,
+          "find": "Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 85,
+          "pdfIndex": 85,
+          "find": "Troubleshooting",
+          "ok": true
+        }
+      ],
+      "pdfPages": 104
+    },
+    "brother-innov-is-a150": {
+      "links": [
+        {
+          "title": "Brother Innov-is A150 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch101372/888_m70_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is A150 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inova150euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 61,
+          "pdfIndex": 61,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 44,
+          "pdfIndex": 44,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 76
+    },
+    "brother-innov-is-a16": {
+      "links": [
+        {
+          "title": "Brother Innov-is A16 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch101352/888_m50_m60_m62_m63_om03en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is A16 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inova16euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 57,
+          "pdfIndex": 57,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 72
+    },
+    "brother-innov-is-a50": {
+      "links": [
+        {
+          "title": "Brother Innov-is A50 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch101352/888_m50_m60_m62_m63_om03en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is A50 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inova50euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 57,
+          "pdfIndex": 57,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 72
+    },
+    "brother-innov-is-a65": {
+      "links": [
+        {
+          "title": "Brother Innov-is A65 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102839/888m64_om02en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is A65 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inova65euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 57,
+          "pdfIndex": 57,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 59,
+          "pdfIndex": 59,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 72
+    },
+    "brother-l14s": {
+      "links": [
+        {
+          "title": "Brother L14S – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch100669/888x64_67_74_77_84_87_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother L14S – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_l14seuk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "The main parts",
+          "printed": 7,
+          "pdfIndex": 7,
+          "find": "THE MAIN PARTS",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Checking the needle",
+          "printed": 9,
+          "pdfIndex": 9,
+          "find": "Checking the needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Changing the presser foot",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "presser foot",
+          "ok": true
+        },
+        {
+          "key": "controls",
+          "topic": "The controls",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "THE CONTROLS",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Winding the bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Lower threading",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Lower threading",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "Upper threading",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Sewing buttonholes",
+          "printed": 34,
+          "pdfIndex": 34,
+          "find": "SEWING BUTTONHOLES",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Maintenance",
+          "printed": 41,
+          "pdfIndex": 41,
+          "find": "MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 43,
+          "pdfIndex": 43,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        }
+      ],
+      "pdfPages": 47
+    },
+    "brother-lx17": {
+      "links": [
+        {
+          "title": "Brother LX17 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch000849/lx17ug01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother LX17 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_lx17euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "The main parts",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "THE MAIN PARTS",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Checking the needle",
+          "printed": 8,
+          "pdfIndex": 8,
+          "find": "Checking the needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Presser foot installation",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Presser foot installation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 12,
+          "pdfIndex": 12,
+          "find": "Winding the bobbin",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Lower threading",
+          "printed": 14,
+          "pdfIndex": 14,
+          "find": "Put the bobbin in",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Upper threading",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Making a buttonhole",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Making a buttonhole",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Maintenance",
+          "printed": 38,
+          "pdfIndex": 38,
+          "find": "MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 40,
+          "pdfIndex": 40,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        }
+      ],
+      "pdfPages": 44
+    },
+    "brother-sh40": {
+      "links": [
+        {
+          "title": "Brother SH40 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch101975/888_n00_n02_n20_n22_n40_n42_n60_om03en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother SH40 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_sh40euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 4,
+          "pdfIndex": 4,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "controls",
+          "topic": "Operation panel",
+          "printed": 6,
+          "pdfIndex": 6,
+          "find": "Operation panel",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 8,
+          "pdfIndex": 8,
+          "find": "Winding",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading and needle threader",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Using the needle threader",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "Needle",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Buttonhole sewing",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Cleaning the machine",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Cleaning the machine surface",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Topic",
+          "ok": true
+        }
+      ],
+      "pdfPages": 32
+    },
+    "brother-celeste-cx1": {
+      "links": [
+        {
+          "title": "Brother Celeste CX1 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch103077/882w92_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Celeste CX1 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovcx1euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "NAMES OF MACHINE PARTS",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 18,
+          "pdfIndex": 18,
+          "find": "LCD SCREEN",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "WINDING/INSTALLING THE BOBBIN",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "UPPER THREADING",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 43,
+          "pdfIndex": 43,
+          "find": "CHANGING THE NEEDLE",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 45,
+          "pdfIndex": 45,
+          "find": "CHANGING THE PRESSER FOOT",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 113,
+          "pdfIndex": 113,
+          "find": "CARE AND MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 116,
+          "pdfIndex": 116,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 32,
+          "pdfIndex": 32,
+          "find": "INSTALLING THE BOBBIN",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 58,
+          "pdfIndex": 58,
+          "find": "sewing buttonholes",
+          "ok": true
+        }
+      ],
+      "pdfPages": 140
+    },
+    "brother-expedition-innov-is-bx1": {
+      "links": [
+        {
+          "title": "Brother Expedition Innov-is BX1 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch103127/bx1_bom1en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Expedition Innov-is BX1 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovbx1euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "LCD Screen",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 38,
+          "pdfIndex": 38,
+          "find": "Changing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 40,
+          "pdfIndex": 40,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 19,
+          "pdfIndex": 19,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "making buttonholes",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery unit",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Attaching the Embroidery Unit",
+          "ok": true
+        },
+        {
+          "key": "embfoot",
+          "topic": "Embroidery foot",
+          "printed": 28,
+          "pdfIndex": 28,
+          "find": "Embroidery Foot",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Hooping the embroidery frame",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Hooping the Embroidery Frame",
+          "ok": true
+        },
+        {
+          "key": "embroider",
+          "topic": "Embroidering",
+          "printed": 34,
+          "pdfIndex": 34,
+          "find": "Embroidering",
+          "ok": true
+        }
+      ],
+      "pdfPages": 48
+    },
+    "brother-innov-is-f420": {
+      "links": [
+        {
+          "title": "Brother Innov-is F420 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch100845/888h70_h72_h82_j70_om04en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is F420 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovf420euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Names of Machine Parts and Their Functions",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 37,
+          "pdfIndex": 37,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 120,
+          "pdfIndex": 120,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 122,
+          "pdfIndex": 122,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 75,
+          "pdfIndex": 75,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 144
+    },
+    "brother-innov-is-f560": {
+      "links": [
+        {
+          "title": "Brother Innov-is F560 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102572/888j92_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is F560 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovf560euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 9,
+          "pdfIndex": 9,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 13,
+          "pdfIndex": 13,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 16,
+          "pdfIndex": 16,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 20,
+          "pdfIndex": 20,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 35,
+          "pdfIndex": 35,
+          "find": "Adjusting the Thread Tension",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 73,
+          "pdfIndex": 73,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 75,
+          "pdfIndex": 75,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 17,
+          "pdfIndex": 17,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 51,
+          "pdfIndex": 51,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 88
+    },
+    "brother-innov-is-m380": {
+      "links": [
+        {
+          "title": "Brother Innov-is M380 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102519/888_p00_p02_p03_om01en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is M380 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovm380euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 21,
+          "pdfIndex": 21,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 25,
+          "pdfIndex": 25,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 38,
+          "pdfIndex": 38,
+          "find": "Adjusting the Thread Tension",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 87,
+          "pdfIndex": 87,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 89,
+          "pdfIndex": 89,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 50,
+          "pdfIndex": 50,
+          "find": "Buttonhole sewing",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery unit",
+          "printed": 65,
+          "pdfIndex": 65,
+          "find": "Attaching the embroidery",
+          "ok": true
+        },
+        {
+          "key": "embfoot",
+          "topic": "Embroidery foot",
+          "printed": 66,
+          "pdfIndex": 66,
+          "find": "embroidery foot",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Hooping the fabric",
+          "printed": 68,
+          "pdfIndex": 68,
+          "find": "Hooping the fabric in the embroidery frame",
+          "ok": true
+        },
+        {
+          "key": "embroider",
+          "topic": "Embroidering",
+          "printed": 71,
+          "pdfIndex": 71,
+          "find": "Embroidering",
+          "ok": true
+        }
+      ],
+      "pdfPages": 104
+    },
+    "brother-innov-is-nv2700": {
+      "links": [
+        {
+          "title": "Brother Innov-is NV2700 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102337/888g26_g30_g32_g34_om02en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is NV2700 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovnv2700euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "Names of Machine Parts",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 15,
+          "pdfIndex": 15,
+          "find": "LCD Operation",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 26,
+          "pdfIndex": 26,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 30,
+          "pdfIndex": 30,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 31,
+          "pdfIndex": 31,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 40,
+          "pdfIndex": 40,
+          "find": "Adjusting the Thread Tension",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 105,
+          "pdfIndex": 105,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 107,
+          "pdfIndex": 107,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 58,
+          "pdfIndex": 58,
+          "find": "Buttonhole sewing",
+          "ok": true
+        },
+        {
+          "key": "module",
+          "topic": "Attaching the embroidery unit",
+          "printed": 81,
+          "pdfIndex": 81,
+          "find": "Attaching the embroidery",
+          "ok": true
+        },
+        {
+          "key": "embfoot",
+          "topic": "Embroidery foot",
+          "printed": 84,
+          "pdfIndex": 84,
+          "find": "Embroidery foot",
+          "ok": true
+        },
+        {
+          "key": "hoop",
+          "topic": "Inserting the fabric in the frame",
+          "printed": 85,
+          "pdfIndex": 85,
+          "find": "Inserting the fabric",
+          "ok": true
+        },
+        {
+          "key": "embroider",
+          "topic": "Embroidering",
+          "printed": 87,
+          "pdfIndex": 87,
+          "find": "Embroidering",
+          "ok": true
+        }
+      ],
+      "pdfPages": 124
+    },
+    "brother-innov-is-vq2": {
+      "links": [
+        {
+          "title": "Brother Innov-is VQ2 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102277/882_d10_d30_om04en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is VQ2 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovvq2euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "NAMES OF MACHINE PARTS AND THEIR FUNCTIONS",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "LCD SCREEN",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "UPPER THREADING",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 51,
+          "pdfIndex": 51,
+          "find": "CHANGING THE NEEDLE",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 49,
+          "pdfIndex": 49,
+          "find": "CHANGING THE PRESSER FOOT",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 182,
+          "pdfIndex": 182,
+          "find": "ADJUSTING THE THREAD TENSION",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 185,
+          "pdfIndex": 185,
+          "find": "CARE AND MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 183,
+          "pdfIndex": 183,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 114,
+          "pdfIndex": 114,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 208
+    },
+    "brother-inventio-nv1350": {
+      "links": [
+        {
+          "title": "Brother Inventio NV1350 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch100225/888f50_f52_f53_f55_f60_f62_f63_f65_f70_f72_f74_f75_om04en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Inventio NV1350 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=gb&lang=en&prod=hf_inov1350euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Names of Machine Parts and Their Functions",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 36,
+          "pdfIndex": 36,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 122,
+          "pdfIndex": 122,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 124,
+          "pdfIndex": 124,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 74,
+          "pdfIndex": 74,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 144
+    },
+    "brother-inventio-nv1850q": {
+      "links": [
+        {
+          "title": "Brother Inventio NV1850Q – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch100225/888f50_f52_f53_f55_f60_f62_f63_f65_f70_f72_f74_f75_om04en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Inventio NV1850Q – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inov1850qeuk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 10,
+          "pdfIndex": 10,
+          "find": "Names of Machine Parts and Their Functions",
+          "ok": true
+        },
+        {
+          "key": "winding",
+          "topic": "Winding the bobbin",
+          "printed": 23,
+          "pdfIndex": 23,
+          "find": "Winding/Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 29,
+          "pdfIndex": 29,
+          "find": "Upper Threading",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 36,
+          "pdfIndex": 36,
+          "find": "Replacing the Needle",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 39,
+          "pdfIndex": 39,
+          "find": "Replacing the Presser Foot",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 122,
+          "pdfIndex": 122,
+          "find": "Care and Maintenance",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 124,
+          "pdfIndex": 124,
+          "find": "Troubleshooting",
+          "ok": true
+        },
+        {
+          "key": "bobbin",
+          "topic": "Installing the bobbin",
+          "printed": 24,
+          "pdfIndex": 24,
+          "find": "Installing the Bobbin",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 74,
+          "pdfIndex": 74,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 144
+    },
+    "brother-vq2": {
+      "links": [
+        {
+          "title": "Brother Innov-is VQ2 – Operation Manual (PDF, English)",
+          "url": "https://download.brother.com/welcome/doch102277/882_d10_d30_om04en.pdf",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        },
+        {
+          "title": "Brother Innov-is VQ2 – manuals and downloads",
+          "url": "https://support.brother.com/g/b/manualtop.aspx?c=eu_ot&lang=en&prod=hf_inovvq2euk",
+          "http": 206,
+          "ok": true,
+          "blockedExpected": false
+        }
+      ],
+      "pages": [
+        {
+          "key": "overview",
+          "topic": "Names of machine parts",
+          "printed": 11,
+          "pdfIndex": 11,
+          "find": "NAMES OF MACHINE PARTS AND THEIR FUNCTIONS",
+          "ok": true
+        },
+        {
+          "key": "lcd",
+          "topic": "Screen / display",
+          "printed": 22,
+          "pdfIndex": 22,
+          "find": "LCD SCREEN",
+          "ok": true
+        },
+        {
+          "key": "upper",
+          "topic": "Upper threading",
+          "printed": 42,
+          "pdfIndex": 42,
+          "find": "UPPER THREADING",
+          "ok": true
+        },
+        {
+          "key": "needle",
+          "topic": "Replacing the needle",
+          "printed": 51,
+          "pdfIndex": 51,
+          "find": "CHANGING THE NEEDLE",
+          "ok": true
+        },
+        {
+          "key": "foot",
+          "topic": "Replacing the presser foot",
+          "printed": 49,
+          "pdfIndex": 49,
+          "find": "CHANGING THE PRESSER FOOT",
+          "ok": true
+        },
+        {
+          "key": "tension",
+          "topic": "Thread tension",
+          "printed": 182,
+          "pdfIndex": 182,
+          "find": "ADJUSTING THE THREAD TENSION",
+          "ok": true
+        },
+        {
+          "key": "maint",
+          "topic": "Care and maintenance",
+          "printed": 185,
+          "pdfIndex": 185,
+          "find": "CARE AND MAINTENANCE",
+          "ok": true
+        },
+        {
+          "key": "trouble",
+          "topic": "Troubleshooting",
+          "printed": 183,
+          "pdfIndex": 183,
+          "find": "TROUBLESHOOTING",
+          "ok": true
+        },
+        {
+          "key": "buttonhole",
+          "topic": "Buttonhole sewing",
+          "printed": 114,
+          "pdfIndex": 114,
+          "find": "Buttonhole sewing",
+          "ok": true
+        }
+      ],
+      "pdfPages": 208
+    }
+  }
+}

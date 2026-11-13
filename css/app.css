@@ -180,3 +180,9 @@ table.pages td:last-child{text-align:right;white-space:nowrap}
 .stepside .sitem.cur{background:var(--tealL);color:var(--tealD)}
 .stepside .sitem .n{flex:0 0 26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-size:.72rem;background:#fff}
 .stepside .sitem.done .n{background:var(--teal);color:#fff;border-color:var(--teal)}
+
+/* ---- browse machines ---- */
+.mrow{align-items:center;gap:10px;flex-wrap:wrap}
+.mrow .mact{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.mrow .btn.sm{padding:6px 12px;min-height:36px}
+@media (max-width:420px){.mrow .mact{width:100%}}

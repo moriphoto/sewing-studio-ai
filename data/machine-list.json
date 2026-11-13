@@ -1,0 +1,1791 @@
+{
+ "shop": {
+  "name": "The Sewing Studio Ltd",
+  "site": "https://www.thesewingstudio.co.uk/",
+  "address": "10 Chapel Street, Redruth, Cornwall, TR15 2DB",
+  "phone": "01209 216 942",
+  "note": "Called \"Red Roof Sewing Company\" in conversation; the real trading name is The Sewing Studio."
+ },
+ "source": "Shopify catalogue JSON (products.json) of thesewingstudio.co.uk, product_type \"Sewing Machines\"",
+ "retrieved": "2026-11-13",
+ "count": 155,
+ "machines": [
+  {
+   "id": "baby-lock-cover-stitch",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Cover Stitch Machine",
+   "model": "Cover Stitch",
+   "type": "coverstitch",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-cover-stitch-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-cover-stitch-machine-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-euphoria",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Euphoria Coverstitch Machine",
+   "model": "Euphoria",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-euphoria-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-primo",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Primo Coverstitch Machine",
+   "model": "Primo",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-primo-coverstitch-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-primo-coverstitch-machine-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-acclaim",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Acclaim Overlocker",
+   "model": "Acclaim",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-acclaim-overlocker",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-acclaim-overlocker-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-enlighten",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Enlighten Overlocker",
+   "model": "Enlighten",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-enlighten-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-enspire",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Enspire Overlocker",
+   "model": "Enspire",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-enspire-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-serenity",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Serenity Overlocker",
+   "model": "Serenity",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-serenity-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-victory",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Victory Overlocker",
+   "model": "Victory",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-victory-overlocker",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-victory-overlocker-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-aspire",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Aspire Coverlock Machine",
+   "model": "Aspire",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-aspire-overlock-coverstitch-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-aspire-coverlock-machine-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-gloria",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Gloria Coverlock Machine",
+   "model": "Gloria",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-gloria-overlocker-coverstitch-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/baby-lock-gloria-overlocker-coverstitch-machine-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "baby-lock-ovation",
+   "brand": "baby lock",
+   "shopTitle": "baby lock Ovation Coverlock Machine",
+   "model": "Ovation",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/baby-lock-ovation-overlocker-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-funlock-b42",
+   "brand": "bernette",
+   "shopTitle": "bernette Funlock B42 Coverstitch Machine",
+   "model": "Funlock B42",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-funlock-b42-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b70-deco",
+   "brand": "bernette",
+   "shopTitle": "bernette B70 DECO Embroidery Machine",
+   "model": "B70 DECO",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b70-deco-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-funlock-b44",
+   "brand": "bernette",
+   "shopTitle": "bernette Funlock B44 Overlocker Machine",
+   "model": "Funlock B44",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-funlock-b44-overlocker-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b64-airlock",
+   "brand": "bernette",
+   "shopTitle": "bernette b64 Airlock Overlocker Machine",
+   "model": "b64 Airlock",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b64-airlock-overlocker-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-funlock-b48",
+   "brand": "bernette",
+   "shopTitle": "bernette Funlock B48 Overlocker & Coverstitch Machine",
+   "model": "Funlock B48",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-funlock-b48-coverstitch-overlocker-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b68-airlock",
+   "brand": "bernette",
+   "shopTitle": "bernette b68 Airlock Overlocker & Coverstitch Machine",
+   "model": "b68 Airlock",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b68-airlock-overlocker-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-05-academy",
+   "brand": "bernette",
+   "shopTitle": "bernette 05 Academy Heavy Duty Sewing Machine",
+   "model": "05 Academy",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-05-academy-heavy-duty-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-05-crafter",
+   "brand": "bernette",
+   "shopTitle": "bernette 05 Crafter Heavy Duty Sewing Machine",
+   "model": "05 Crafter",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-05-crafter-heavy-duty-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b35",
+   "brand": "bernette",
+   "shopTitle": "bernette B35 Sewing Machine",
+   "model": "B35",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b35-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b37",
+   "brand": "bernette",
+   "shopTitle": "bernette B37 Sewing Machine",
+   "model": "B37",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b37-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b38",
+   "brand": "bernette",
+   "shopTitle": "bernette B38 Sewing Machine",
+   "model": "B38",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b38-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b33",
+   "brand": "bernette",
+   "shopTitle": "bernette b33 Sewing Machine",
+   "model": "b33",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b33-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b77",
+   "brand": "bernette",
+   "shopTitle": "bernette b77 Sewing Machine",
+   "model": "b77",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b77-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-08",
+   "brand": "bernette",
+   "shopTitle": "bernette 08 Straight Stitch Sewing Machine",
+   "model": "08",
+   "type": "sewing (straight stitch)",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-08-straight-stitch-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernette-b59",
+   "brand": "bernette",
+   "shopTitle": "bernette B59 Sewing & Embroidery Machine",
+   "model": "B59",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b59-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false,
+   "status": "built"
+  },
+  {
+   "id": "bernette-b79",
+   "brand": "bernette",
+   "shopTitle": "bernette B79 Sewing & Embroidery Machine",
+   "model": "B79",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernette-b79-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l620",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L620 Coverstitch",
+   "model": "L620",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l620-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-500e",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 500E Embroidery Machine",
+   "model": "500E",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-500e-embroidery-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-500e-embroidery-machine-ex-demonstration-model-1"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-700e-pro",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 700e PRO Embroidery Machine",
+   "model": "700e PRO",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-700-pro-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l450",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L450 Overlocker",
+   "model": "L450",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l450-overlocker",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-l450-overlocker-ex-demonstration"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l460",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L460 Overlocker",
+   "model": "L460",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l460-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l660",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L660 Overlocker",
+   "model": "L660",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l660-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l850",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L850 Overlocker",
+   "model": "L850",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l850-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l860",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L860 Overlocker",
+   "model": "L860",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l860-overlocker",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-l860-overlocker-ex-display"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-l890",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA L890 Overlocker & Coverstitch Machine",
+   "model": "L890",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-l890-overlocker-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-325",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 325 Sewing Machine",
+   "model": "325",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-s-325-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-335",
+   "brand": "Bernina",
+   "shopTitle": "Bernina 335 Sewing Machine",
+   "model": "335",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-s-335-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-335-sewing-machine-ex-display-1"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-435",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 435 Sewing Machine",
+   "model": "435",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-435-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-435-sewing-machine-ex-demonstration-1"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-475-qe",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 475 QE Sewing Machine",
+   "model": "475 QE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-475-qe-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-480",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 480 Sewing Machine",
+   "model": "480",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-480-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-495-liberty-edition",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 495 Liberty Edition Sewing Machine",
+   "model": "495 Liberty Edition",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-495-liberty-edition-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-540",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 540 Sewing Machine",
+   "model": "540",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-540-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-570-qe",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 570 QE Sewing Machine",
+   "model": "570 QE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-570-qe-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-570-qe-sewing-machine-ex-demonstration-model-1"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-580-liberty-edition",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 580 Liberty Edition Sewing Machine",
+   "model": "580 Liberty Edition",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-580-liberty-edition-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-590",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 590 Sewing Machine",
+   "model": "590",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-590-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-735",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 735 Sewing Machine",
+   "model": "735",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-735-sewing-machine-ex-demonstration-model",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-735-sewing-machine-ex-demonstration-model"
+   ],
+   "onlyExDisplayListed": true
+  },
+  {
+   "id": "bernina-735-pro",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 735 Pro Sewing Machine",
+   "model": "735 Pro",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-735-pro-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-735-pro-sewing-machine-ex-demonstration"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-770-qe",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 770 QE PRO Sewing Machine",
+   "model": "770 QE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-770-qe-pro-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/bernina-770-qe-pro-sewing-machine-ex-demonstration",
+    "https://www.thesewingstudio.co.uk/products/bernina-770-qe-pro-sewing-machine-open-box"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-790-pro",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 790 Pro Sewing Machine",
+   "model": "790 Pro",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-790-pro-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-790-ultra",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 790 Ultra Sewing Machine",
+   "model": "790 Ultra",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-790-ultra-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-590e",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 590E Sewing and Embroidery Machine",
+   "model": "590E",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-590e-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "bernina-790e-ultra",
+   "brand": "Bernina",
+   "shopTitle": "BERNINA 790E Ultra Sewing and Embroidery Machine",
+   "model": "790E Ultra",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-790e-ultra-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-cv3440",
+   "brand": "Brother",
+   "shopTitle": "Brother CV3440 Coverstitch Machine",
+   "model": "CV3440",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-cv3440-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-cv3550",
+   "brand": "Brother",
+   "shopTitle": "Brother CV3550 Coverstitch Machine",
+   "model": "CV3550",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-cv3550-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-celeste-cx1e",
+   "brand": "Brother",
+   "shopTitle": "Brother Celeste CX1e Embroidery Machine",
+   "model": "Celeste CX1e",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-celeste-cx1e-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-expedition-innov-is-bx1e",
+   "brand": "Brother",
+   "shopTitle": "Brother Expedition Innov-is BX1e Embroidery Machine",
+   "model": "Expedition Innov-is BX1e",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-expedition-innov-is-bx1e-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-f540e",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is F540E Embroidery Machine",
+   "model": "Innov-is F540E",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-f540e-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-nv880e",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is NV880E Embroidery Machine",
+   "model": "Innov-is NV880E",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-nv880e-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-stellaire-xe2",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is Stellaire XE2 Embroidery Machine",
+   "model": "Innov-is Stellaire XE2",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-xe2-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-v3le",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is V3LE Embroidery Machine",
+   "model": "Innov-is V3LE",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-v3le-embroidery-only-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/brother-innov-is-v3le-embroidery-only-machine-ex-demonstration-1"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-pr1060w-entrepreneur-pro-w-10-needle",
+   "brand": "Brother",
+   "shopTitle": "Brother PR1060W Entrepreneur Pro W 10-Needle Embroidery Machine",
+   "model": "PR1060W Entrepreneur Pro W 10-Needle",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-pr1060w-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-pr1x",
+   "brand": "Brother",
+   "shopTitle": "Brother PR1X Embroidery Machine",
+   "model": "PR1X",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-pr1x-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-pr680w",
+   "brand": "Brother",
+   "shopTitle": "Brother PR680W Embroidery Machine",
+   "model": "PR680W",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-pr680w-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-vr",
+   "brand": "Brother",
+   "shopTitle": "Brother VR Embroidery Machine",
+   "model": "VR",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-vr-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-2104d",
+   "brand": "Brother",
+   "shopTitle": "Brother 2104D Overlocker Machine",
+   "model": "2104D",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-2104d-overlocker-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-3034dwt",
+   "brand": "Brother",
+   "shopTitle": "Brother 3034DWT Overlocker",
+   "model": "3034DWT",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-3034dwt-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-4234d",
+   "brand": "Brother",
+   "shopTitle": "Brother 4234D Overlocker",
+   "model": "4234D",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-4234d-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-airflow-3000",
+   "brand": "Brother",
+   "shopTitle": "Brother Airflow 3000 Overlocker",
+   "model": "Airflow 3000",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-airflow-3000-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-celeste-cx1",
+   "brand": "Brother",
+   "shopTitle": "Brother Celeste CX1 Sewing Machine",
+   "model": "Celeste CX1",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-celeste-cx1",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/brother-celeste-cx1-sewing-machine-copy"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-hf37",
+   "brand": "Brother",
+   "shopTitle": "Brother HF37 Strong & Tough Sewing Machine",
+   "model": "HF37",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-hf37-strong-tough-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-15",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is 15 Sewing Machine",
+   "model": "Innov-is 15",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-15-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-a150",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is A150 Sewing Machine",
+   "model": "Innov-is A150",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-a150-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-a16",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is A16 Sewing Machine",
+   "model": "Innov-is A16",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-a16-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-a50",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is A50 Sewing Machine",
+   "model": "Innov-is A50",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-a50-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-a65",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is A65 Sewing Machine",
+   "model": "Innov-is A65",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-a65-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-f420",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is F420 Sewing Machine",
+   "model": "Innov-is F420",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-f420-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-f560",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is F560 Sewing Machine",
+   "model": "Innov-is F560",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-f560-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-inventio-nv1350",
+   "brand": "Brother",
+   "shopTitle": "Brother Inventio NV1350 Sewing Machine",
+   "model": "Inventio NV1350",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-inventio-nv1350-sewing-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/brother-inventio-nv1350-sewing-machine-copy"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-inventio-nv1850q",
+   "brand": "Brother",
+   "shopTitle": "Brother Inventio NV1850Q Sewing Machine",
+   "model": "Inventio NV1850Q",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-inventio-nv1850q-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-l14s",
+   "brand": "Brother",
+   "shopTitle": "Brother L14S Sewing Machine",
+   "model": "L14S",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-l14s-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-lx17",
+   "brand": "Brother",
+   "shopTitle": "Brother LX17 Sewing Machine",
+   "model": "LX17",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-lx17-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-lx25",
+   "brand": "Brother",
+   "shopTitle": "Brother LX25 Sewing Machine",
+   "model": "LX25",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-lx25-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-sh40",
+   "brand": "Brother",
+   "shopTitle": "Brother SH40 Sewing Machine",
+   "model": "SH40",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-sh40-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-vq2",
+   "brand": "Brother",
+   "shopTitle": "Brother VQ2 Sewing Machine",
+   "model": "VQ2",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-vq2-sewing-machine-ex-demonstration",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/brother-vq2-sewing-machine-ex-demonstration"
+   ],
+   "onlyExDisplayListed": true
+  },
+  {
+   "id": "brother-innov-is-vq2",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is VQ2 Long Arm Sewing & Quilting Machine",
+   "model": "Innov-is VQ2",
+   "type": "sewing (long-arm quilting)",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-vq2-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-pq1600s",
+   "brand": "Brother",
+   "shopTitle": "Brother PQ1600S Straight Stitch Sewing Machine",
+   "model": "PQ1600S",
+   "type": "sewing (straight stitch)",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-pq1600s-straight-stitch-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-expedition-innov-is-bx1",
+   "brand": "Brother",
+   "shopTitle": "Brother Expedition Innov-is BX1 Sewing & Embroidery Machine",
+   "model": "Expedition Innov-is BX1",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-expedition-innov-is-bx1-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-f580",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is F580 Sewing & Embroidery Machine",
+   "model": "Innov-is F580",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-f580-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-m380",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is M380 Sewing & Embroidery Machine",
+   "model": "Innov-is M380",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-m380-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-nv2700",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is NV2700 Sewing & Embroidery Machine",
+   "model": "Innov-is NV2700",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-nv2700-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-innov-is-v5le",
+   "brand": "Brother",
+   "shopTitle": "Brother Innov-is V5LE Sewing & Embroidery Machine",
+   "model": "Innov-is V5LE",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-v5le-sewing-embroidery-machine",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/brother-innov-is-v5le-sewing-embroidery-machine-ex-demonstration-model"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "brother-stellaire-innov-is-xj2",
+   "brand": "Brother",
+   "shopTitle": "Brother Stellaire Innov-is XJ2 Sewing & Embroidery Machine",
+   "model": "Stellaire Innov-is XJ2",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/brother-innov-is-xj2-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "husqvarna-opal-650",
+   "brand": "Husqvarna",
+   "shopTitle": "Husqvarna Opal 650 Sewing Machine",
+   "model": "Opal 650",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/husqvarna-opal-650-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "husqvarna-topaz-50",
+   "brand": "Husqvarna",
+   "shopTitle": "Husqvarna Topaz 50 Sewing and Embroidery Machine",
+   "model": "Topaz 50",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/husqvarna-topaz-50-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-coverpro-2000cpx",
+   "brand": "Janome",
+   "shopTitle": "Janome CoverPro 2000CPX Coverstitch Machine",
+   "model": "CoverPro 2000CPX",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-coverpro-2000cpx-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-coverpro-3000-professional",
+   "brand": "Janome",
+   "shopTitle": "Janome CoverPro 3000 Professional Coverstitch Machine",
+   "model": "CoverPro 3000 Professional",
+   "type": "coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-coverpro-3000-professional-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-memory-craft-100e",
+   "brand": "Janome",
+   "shopTitle": "Janome Memory Craft 100E Embroidery Machine",
+   "model": "Memory Craft 100E",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-memory-craft-100e-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-memory-craft-550e-le",
+   "brand": "Janome",
+   "shopTitle": "Janome Memory Craft 550E LE Embroidery Machine",
+   "model": "Memory Craft 550E LE",
+   "type": "embroidery",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-memory-craft-550e-le-embroidery-only-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-9300dx",
+   "brand": "Janome",
+   "shopTitle": "Janome 9300DX Overlocker",
+   "model": "9300DX",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-9300dx-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-at2000d-air-thread-professional",
+   "brand": "Janome",
+   "shopTitle": "Janome AT2000D Air Thread Professional Overlocker",
+   "model": "AT2000D Air Thread Professional",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-at2000d-air-threader-professional-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-mylock-454d",
+   "brand": "Janome",
+   "shopTitle": "Janome MyLock 454D Overlocker",
+   "model": "MyLock 454D",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-mylock-454d-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-mylock-654d",
+   "brand": "Janome",
+   "shopTitle": "Janome MyLock 654D Overlocker",
+   "model": "MyLock 654D",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-mylock-654d-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-overlocker-8004d",
+   "brand": "Janome",
+   "shopTitle": "Janome Overlocker 8004D",
+   "model": "Overlocker 8004D",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-overlocker-8004d",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-2200xt",
+   "brand": "Janome",
+   "shopTitle": "Janome 2200XT Sewing Machine",
+   "model": "2200XT",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-2200xt-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-224a",
+   "brand": "Janome",
+   "shopTitle": "Janome 224A Sewing Machine",
+   "model": "224A",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-224a-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-230dc-le",
+   "brand": "Janome",
+   "shopTitle": "Janome 230DC LE Sewing Machine",
+   "model": "230DC LE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-230dc-le-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-360dc",
+   "brand": "Janome",
+   "shopTitle": "Janome 360DC Sewing Machine",
+   "model": "360DC",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-360dc-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-360dc-le",
+   "brand": "Janome",
+   "shopTitle": "Janome 360DC LE Sewing Machine",
+   "model": "360DC LE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-360dc-le-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-423s",
+   "brand": "Janome",
+   "shopTitle": "Janome 423S Sewing Machine",
+   "model": "423S",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-423s-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-5060-qdc",
+   "brand": "Janome",
+   "shopTitle": "Janome 5060 QDC Sewing Machine",
+   "model": "5060 QDC",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-5060-qdc-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-5270qdc",
+   "brand": "Janome",
+   "shopTitle": "Janome 5270QDC Sewing Machine",
+   "model": "5270QDC",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-5270qdc-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-8200qcp-se",
+   "brand": "Janome",
+   "shopTitle": "Janome 8200QCP SE Sewing Machine",
+   "model": "8200QCP SE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-8200qcp-se-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-3",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 3 Sewing Machine",
+   "model": "Atelier 3",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-3-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-3-anniversary-edition",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 3 Anniversary Edition Sewing Machine",
+   "model": "Atelier 3 Anniversary Edition",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-3ae-sewing-machine-10-year-anniversary-edition",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/janome-atelier-3-ae-sewing-machine-10-year-anniversary-edition-ex-display-copy"
+   ],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-5",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 5 Sewing Machine",
+   "model": "Atelier 5",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-5-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-5-anniversary-edition",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 5 Anniversary Edition Sewing Machine",
+   "model": "Atelier 5 Anniversary Edition",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-5-ae-sewing-machine-10-year-anniversary-edition",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-6-anniversary-edition",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 6 Anniversary Edition Sewing Machine",
+   "model": "Atelier 6 Anniversary Edition",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-6-ae-sewing-machine-10-year-anniversary-edition",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-8",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 8 Sewing Machine",
+   "model": "Atelier 8",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-8-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-continental-m8-professional",
+   "brand": "Janome",
+   "shopTitle": "Janome Continental M8 Professional Sewing Machine",
+   "model": "Continental M8 Professional",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-continental-m8-professional-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-dks100-se",
+   "brand": "Janome",
+   "shopTitle": "Janome DKS100 SE Sewing Machine",
+   "model": "DKS100 SE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-dks100-se-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-dks30-se",
+   "brand": "Janome",
+   "shopTitle": "Janome DKS30 SE Sewing Machine",
+   "model": "DKS30 SE",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-dks30-se-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-hd2200",
+   "brand": "Janome",
+   "shopTitle": "Janome HD2200 Sewing Machine",
+   "model": "HD2200",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-hd2200-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-hd9-professional",
+   "brand": "Janome",
+   "shopTitle": "Janome HD9 Professional Sewing Machine",
+   "model": "HD9 Professional",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-hd9-professional-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-hd9-qc-professional",
+   "brand": "Janome",
+   "shopTitle": "Janome HD9 QC Professional Sewing Machine",
+   "model": "HD9 QC Professional",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-hd9-qc-professional-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-j3-18",
+   "brand": "Janome",
+   "shopTitle": "Janome J3-18 Sewing Machine",
+   "model": "J3-18",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-j3-18-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-j3-20",
+   "brand": "Janome",
+   "shopTitle": "Janome J3-20 Sewing Machine",
+   "model": "J3-20",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-j3-20-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-j3-24",
+   "brand": "Janome",
+   "shopTitle": "Janome J3-24 Sewing Machine",
+   "model": "J3-24",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-j3-24-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-m200qdc",
+   "brand": "Janome",
+   "shopTitle": "Janome M200QDC Sewing Machine",
+   "model": "M200QDC",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-m200qdc-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-memory-craft-6700p",
+   "brand": "Janome",
+   "shopTitle": "Janome Memory Craft 6700P Sewing Machine",
+   "model": "Memory Craft 6700P",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-memory-craft-6700p-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-memory-craft-9480qcp",
+   "brand": "Janome",
+   "shopTitle": "Janome Memory Craft 9480QCP Sewing Machine",
+   "model": "Memory Craft 9480QCP",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-memory-craft-9480qcp-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-sewist-725s",
+   "brand": "Janome",
+   "shopTitle": "Janome Sewist 725S Sewing Machine",
+   "model": "Sewist 725S",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-sewist-725s-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-sewist-740dc",
+   "brand": "Janome",
+   "shopTitle": "Janome Sewist 740DC Sewing Machine",
+   "model": "Sewist 740DC",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-sewist-740dc-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-atelier-9",
+   "brand": "Janome",
+   "shopTitle": "Janome Atelier 9 Sewing and Embroidery Machine",
+   "model": "Atelier 9",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-atelier-9-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "janome-memory-craft-1000",
+   "brand": "Janome",
+   "shopTitle": "Janome Memory Craft 1000 Sewing and Embroidery Machine",
+   "model": "Memory Craft 1000",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/janome-memory-craft-1000-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-admire-1000",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Admire 1000 Overlocker",
+   "model": "Admire 1000",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-admire-1000-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-admire-3000",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Admire 3000 Overlocker",
+   "model": "Admire 3000",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-admire-3000-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-admire-air-5000",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Admire Air 5000 Overlocker",
+   "model": "Admire Air 5000",
+   "type": "overlocker",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-admire-air-5000-overlocker",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-admire-air-6000",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Admire Air 6000 Coverlock Machine",
+   "model": "Admire Air 6000",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-admire-air-6000-coverstitch-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-admire-air-7000",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Admire Air 7000 Coverlock Machine",
+   "model": "Admire Air 7000",
+   "type": "overlocker+coverstitch",
+   "computerised": null,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-admire-air-7000-coverlock-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-ambition-610",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Ambition 610 Sewing Machine",
+   "model": "Ambition 610",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-ambition-610-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-ambition-620",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Ambition 620 Sewing Machine",
+   "model": "Ambition 620",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-ambition-620-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-creative-elevate-680",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Creative Elevate 680 Sewing Machine",
+   "model": "Creative Elevate 680",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-elevate-680-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-expression-715",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Expression 715 Sewing Machine",
+   "model": "Expression 715",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-expression-715-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-passport-2-0",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Passport 2.0 Sewing Machine",
+   "model": "Passport 2.0",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-passport-2-0-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-passport-3-0",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Passport 3.0 Sewing Machine",
+   "model": "Passport 3.0",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-passport-3-0-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-quilt-ambition-635",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Quilt Ambition 635 Sewing Machine",
+   "model": "Quilt Ambition 635",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-quilt-ambition-635-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-quilt-expression-720",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Quilt Expression 720 Sewing Machine",
+   "model": "Quilt Expression 720",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-quilt-expression-720-sewing-machine-ex-display",
+   "exDisplayUrls": [
+    "https://www.thesewingstudio.co.uk/products/pfaff-quilt-expression-720-sewing-machine-ex-display"
+   ],
+   "onlyExDisplayListed": true
+  },
+  {
+   "id": "pfaff-quilt-expression-725",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Quilt Expression 725 Sewing Machine",
+   "model": "Quilt Expression 725",
+   "type": "sewing",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-quilt-expression-725-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-select-3-2",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Select 3.2 Sewing Machine",
+   "model": "Select 3.2",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-select-3-2-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-select-4-2",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Select 4.2 Sewing Machine",
+   "model": "Select 4.2",
+   "type": "sewing",
+   "computerised": false,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-select-4-2-sewing-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-creative-ambition-640",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Creative Ambition 640 Sewing and Embroidery Machine",
+   "model": "Creative Ambition 640",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-ambition-640-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-creative-expect-350",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Creative Expect 350 Sewing & Embroidery Machine",
+   "model": "Creative Expect 350",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-expect-350-sewing-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-creative-expression-750",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Creative Expression 750 Sewing and Embroidery Machine",
+   "model": "Creative Expression 750",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-expression-750-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  },
+  {
+   "id": "pfaff-creative-performance-950",
+   "brand": "PFAFF",
+   "shopTitle": "PFAFF Creative Performance 950 Sewing and Embroidery Machine",
+   "model": "Creative Performance 950",
+   "type": "sewing+embroidery",
+   "computerised": true,
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-performance-950-sewing-and-embroidery-machine",
+   "exDisplayUrls": [],
+   "onlyExDisplayListed": false
+  }
+ ],
+ "excludedNotSewingMachines": [
+  {
+   "title": "PFAFF Creative Elevate 680 Embroidery Unit",
+   "url": "https://www.thesewingstudio.co.uk/products/pfaff-creative-elevate-680-embroidery-unit"
+  },
+  {
+   "title": "Brother HL-JF1 PrintModa Studio Fabric Printer",
+   "url": "https://www.thesewingstudio.co.uk/products/brother-hl-jf1-printmoda-studio-fabric-printer"
+  },
+  {
+   "title": "Brother Sublimation Printer SP1",
+   "url": "https://www.thesewingstudio.co.uk/products/brother-sublimation-printer-sp1"
+  },
+  {
+   "title": "Brother ScanNCut SDX2250D Scanning and Cutting Machine",
+   "url": "https://www.thesewingstudio.co.uk/products/brother-scanncut-sdx2250d-scanning-and-cutting-machine"
+  },
+  {
+   "title": "BERNINA Embroidery Module  L (SDT)",
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-embroidery-unit-emb-7x8"
+  },
+  {
+   "title": "BERNINA Embroidery Module M (SDT)",
+   "url": "https://www.thesewingstudio.co.uk/products/bernina-embroidery-unit-s-emb-5x0"
+  }
+ ]
+}
