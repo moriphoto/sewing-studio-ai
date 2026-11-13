@@ -1,0 +1,15 @@
+{
+  "name": "Sewing Studio AI",
+  "short_name": "Sewing AI",
+  "description": "Manuals, machine diagrams, setup guides and AI help for sewing and embroidery machines.",
+  "start_url": "./#/home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#EDE8EB",
+  "theme_color": "#008080",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

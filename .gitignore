@@ -1,0 +1,7 @@
+node_modules/
+screenshots/
+.netlify/
+_gallery.html
+*.log
+*.tmp*
+tests/.tmp-*
