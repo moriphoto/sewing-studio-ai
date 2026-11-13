@@ -7,7 +7,7 @@
 <style>
 :root { --teal: #008080; --fawn: #E5A361; --platinum: #EDE8EB; --dark: #1a1a1a; --light: #ffffff; --muted: #6b6b6b; --card: #ffffff; --shadow: 0 4px 20px rgba(0,0,0,0.08); }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif; background: var(--platinum); color: var(--dark); min-height: 100vh; }
+body { font-family: 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif; background: var(--platinum); color: var(--dark); min-height: 100vh; -webkit-font-smoothing: antialiased; }
 .app { max-width: 480px; margin: 0 auto; background: var(--light); min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
 header { background: var(--teal); color: white; padding: 16px 20px 12px; position: sticky; top: 0; z-index: 100; }
 header h1 { font-size: 1.15rem; font-weight: 600; }
@@ -19,63 +19,107 @@ header p { font-size: 0.75rem; opacity: 0.85; }
 .screen.active { display: block; }
 .card { background: var(--card); border-radius: 16px; padding: 16px; margin-bottom: 14px; box-shadow: var(--shadow); border: 1px solid #f0f0f0; }
 .card h2 { font-size: 1rem; margin-bottom: 8px; color: var(--teal); }
+.card p, .card li { font-size: 0.85rem; line-height: 1.5; color: #333; }
 .machines { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .machine-btn { background: white; border: 2px solid #eee; border-radius: 12px; padding: 14px 10px; text-align: center; cursor: pointer; font-family: inherit; font-size: 0.8rem; font-weight: 600; }
 .machine-btn.selected { border-color: var(--teal); background: #f0fafa; color: var(--teal); }
 .btn { background: var(--teal); color: white; border: none; padding: 12px 18px; border-radius: 10px; font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
 .btn.secondary { background: white; color: var(--teal); border: 1px solid var(--teal); }
+.step-card { background: #f8fdfd; border-radius: 12px; padding: 14px; margin: 10px 0; border-left: 4px solid var(--teal); }
+.step-progress { display: flex; gap: 6px; margin: 12px 0; }
+.step-dot { flex: 1; height: 4px; background: #eee; border-radius: 2px; }
+.step-dot.done { background: var(--teal); }
+.step-dot.current { background: var(--fawn); }
 </style>
 </head>
 <body>
 <div class="app">
 <header>
   <h1>Sewing Studio AI</h1>
-  <p>Guided help for your machine — full prototype</p>
+  <p>Guided help for your machine</p>
 </header>
 <nav class="nav">
   <button class="active" data-screen="home">Home</button>
   <button data-screen="tutorials">Tutorials</button>
   <button data-screen="profile">Profile</button>
+  <button data-screen="ask">Ask</button>
 </nav>
+
 <div class="screen active" id="home">
   <div class="card">
     <h2>Select your machine</h2>
     <div class="machines">
       <button class="machine-btn selected" data-machine="Brother">Brother</button>
       <button class="machine-btn" data-machine="Bernette b59">Bernette b59</button>
+      <button class="machine-btn" data-machine="Bernina">Bernina</button>
+      <button class="machine-btn" data-machine="Janome">Janome</button>
     </div>
-    <p id="machine-note" style="margin-top:12px;font-size:0.8rem;color:var(--teal);">Selected: Brother</p>
+    <p id="machine-note" style="margin-top:12px;font-size:0.8rem;color:var(--teal);font-weight:600;">Selected: Brother</p>
   </div>
   <div class="card">
-    <h2>Full interactive prototype</h2>
-    <p>The complete single-file app (machine selection, guided b59 embroidery setup, manual upload with versioning, semantic search prep, photo analysis, Ask, materials, gallery) is ready locally and will be expanded here. This commit establishes the live site structure on GitHub for Netlify.</p>
-    <p style="margin-top:8px">Open the Tutorials tab for the b59 Embroidery Setup guide.</p>
+    <h2>Quick start</h2>
+    <p>Open Tutorials for the full b59 Embroidery Setup guide, or Ask for machine-specific help.</p>
   </div>
 </div>
+
 <div class="screen" id="tutorials">
   <div class="card">
-    <h2>b59 Embroidery Setup</h2>
-    <p>From unbox to ready to stitch — follows the official manual visuals.</p>
-    <ol style="padding-left:18px;margin-top:8px;font-size:0.85rem;line-height:1.6">
-      <li>Switch on & select Embroidery mode on the Home Screen.</li>
-      <li>Attach the Embroidery Module (slides in from left to right until it clicks).</li>
-      <li>Fit the Hopper Embroidery Foot and embroidery needle.</li>
-      <li>Prepare the hoop with the template and hoop the fabric taut.</li>
-      <li>Attach the hoop to the module until it clicks and is recognised.</li>
-      <li>Thread bobbin and upper embroidery thread.</li>
-      <li>Load design and press start.</li>
-    </ol>
+    <h2>Guided tutorials</h2>
+    <div id="tutorialsList"></div>
+  </div>
+  <div class="card" id="guideCard" style="display:none">
+    <h2 id="guideTitle"></h2>
+    <div class="step-progress" id="stepProgress"></div>
+    <div id="stepContent"></div>
+    <div style="display:flex;gap:8px;margin-top:12px">
+      <button class="btn secondary" style="flex:1" onclick="prevStep()">Previous</button>
+      <button class="btn" style="flex:1" onclick="nextStep()">Next</button>
+    </div>
   </div>
 </div>
+
 <div class="screen" id="profile">
   <div class="card">
     <h2>Machine profile</h2>
-    <p>Select Bernette b59 on Home for the dedicated profile and manual upload area.</p>
+    <div id="profileContent"></div>
+  </div>
+</div>
+
+<div class="screen" id="ask">
+  <div class="card">
+    <h2>Ask a question</h2>
+    <textarea id="question" style="width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;font-family:inherit;min-height:70px;" placeholder="e.g. How do I attach the embroidery module on the b59?"></textarea>
+    <button class="btn" onclick="askQuestion()">Get guidance</button>
+    <div id="answer" style="display:none;background:#f9f9f9;padding:12px;border-radius:10px;margin-top:10px;font-size:0.85rem;"></div>
   </div>
 </div>
 </div>
+
 <script>
+const guides = {
+  b59embroidery: {
+    title: "Bernette b59 — Embroidery Setup",
+    steps: [
+      { title: "1. Switch on & select Embroidery", body: "Connect power and switch the machine on. On the Home Screen tap the Embroidery icon (the hoop symbol). The Embroidery Screen appears." },
+      { title: "2. Attach the Embroidery Module", body: "Ensure the work area is clear and stable. Push the embroidery module carefully from left to right into the connection on the machine until it clicks. Look for the alignment points and the unlock button on the side of the module. The feed dog lowers automatically." },
+      { title: "3. Fit the embroidery foot & needle", body: "Attach the Hopper Embroidery Foot (the one with the open front for visibility). Insert a suitable embroidery needle from the included assortment." },
+      { title: "4. Prepare the hoop", body: "Open the quick-release lever on the outer ring and lift out the inner ring. Place the clear template into the inner ring so the bernette logo is on the right — it snaps in. Lay your fabric over the template with at least 2 cm excess on all sides and line up the design centre with the cross marks." },
+      { title: "5. Hoop the fabric", body: "Set the inner ring + fabric into the outer ring so the arrow markings on both rings line up. Slide them together firmly, pull the fabric tight like a drum, then close the quick-release lever. Remove the template." },
+      { title: "6. Attach the hoop to the machine", body: "Raise the needle and presser foot. Hold the hoop with the fabric right-side up and the attaching mechanism to the left. Push the presser foot lifter all the way up and hold it, then slide the hoop into the module until it clicks. The machine will recognise the hoop and show its name in the status bar." },
+      { title: "7. Thread the machine", body: "Thread a suitable bobbin thread and upper embroidery thread following the normal path shown on the machine and in the threading diagrams." },
+      { title: "8. Load design & start", body: "On the Embroidery Screen load or select your design. Check the stitch-out summary on screen, then press the start button. The machine is now ready to embroider." }
+    ]
+  }
+};
+
+const tutorials = [
+  { title: "🎯 b59 Embroidery Setup", desc: "From unbox to ready to stitch", icon: "🎯", screen: "b59embroidery" }
+];
+
 let selectedMachine = "Brother";
+let currentGuide = null;
+let currentStep = 0;
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
@@ -83,17 +127,75 @@ function showScreen(id) {
   const btn = document.querySelector(`.nav button[data-screen="${id}"]`);
   if (btn) btn.classList.add('active');
 }
+
 document.querySelectorAll('.nav button').forEach(btn => {
   btn.addEventListener('click', () => showScreen(btn.dataset.screen));
 });
+
 document.querySelectorAll('.machine-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.machine-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     selectedMachine = btn.dataset.machine;
     document.getElementById('machine-note').textContent = `Selected: ${selectedMachine}`;
+    renderProfile();
   });
 });
+
+function renderTutorials() {
+  const list = document.getElementById('tutorialsList');
+  list.innerHTML = tutorials.map(t => `
+    <div class="item" style="display:flex;align-items:center;padding:12px 0;border-bottom:1px solid #f0f0f0;cursor:pointer;" onclick="startGuide('${t.screen}')">
+      <div style="width:42px;height:42px;background:#f0fafa;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-right:12px;font-size:1.2rem;">${t.icon}</div>
+      <div><strong>${t.title}</strong><br><span style="font-size:0.75rem;color:#666">${t.desc}</span></div>
+    </div>
+  `).join('');
+}
+
+function startGuide(id) {
+  currentGuide = guides[id];
+  currentStep = 0;
+  document.getElementById('guideCard').style.display = 'block';
+  document.getElementById('guideTitle').textContent = currentGuide.title;
+  renderStep();
+}
+
+function renderStep() {
+  const steps = currentGuide.steps;
+  const progress = document.getElementById('stepProgress');
+  progress.innerHTML = steps.map((_, i) => `<div class="step-dot ${i < currentStep ? 'done' : i === currentStep ? 'current' : ''}"></div>`).join('');
+  const s = steps[currentStep];
+  document.getElementById('stepContent').innerHTML = `<div class="step-card"><strong>${s.title}</strong><p style="margin-top:6px">${s.body}</p></div>`;
+}
+
+function nextStep() { if (currentStep < currentGuide.steps.length - 1) { currentStep++; renderStep(); } }
+function prevStep() { if (currentStep > 0) { currentStep--; renderStep(); } }
+
+function renderProfile() {
+  const el = document.getElementById('profileContent');
+  if (selectedMachine === 'Bernette b59') {
+    el.innerHTML = `<p><strong>Bernette b59</strong> — Combination sewing & embroidery machine.</p>
+    <ul style="padding-left:18px;margin-top:8px;font-size:0.85rem;">
+      <li>Embroidery area up to 120 × 300 mm with multi-position hoop</li>
+      <li>StitchDirect WiFi app for design transfer</li>
+      <li>Click & Lift stitch plate, automatic hoop recognition</li>
+      <li>Use the Tutorials tab for the full visual embroidery setup guide</li>
+    </ul>`;
+  } else {
+    el.innerHTML = `<p>Selected: <strong>${selectedMachine}</strong>. Dedicated profiles and manuals can be added for more machines.</p>`;
+  }
+}
+
+function askQuestion() {
+  const q = document.getElementById('question').value.trim();
+  const ans = document.getElementById('answer');
+  ans.style.display = 'block';
+  if (!q) { ans.textContent = 'Please type a question.'; return; }
+  ans.innerHTML = `<strong>Guidance for ${selectedMachine}:</strong><br>For embroidery setup on the b59, start with the Tutorials tab — it walks through attaching the module, hooping, and starting the stitch-out using the official manual diagrams. In the full Netlify version this will pull directly from your uploaded manual with AI.`;
+}
+
+renderTutorials();
+renderProfile();
 </script>
 </body>
 </html>
