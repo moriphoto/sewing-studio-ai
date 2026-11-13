@@ -2,11 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sewing Studio AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Sewing Studio AI — Prototype</title>
+<style>
+:root { --teal: #008080; --fawn: #E5A361; --platinum: #EDE8EB; --dark: #1a1a1a; --light: #ffffff; --muted: #6b6b6b; --card: #ffffff; --shadow: 0 4px 20px rgba(0,0,0,0.08); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif; background: var(--platinum); color: var(--dark); min-height: 100vh; }
+.app { max-width: 480px; margin: 0 auto; background: var(--light); min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,0.1); }
+header { background: var(--teal); color: white; padding: 16px 20px 12px; position: sticky; top: 0; z-index: 100; }
+header h1 { font-size: 1.15rem; font-weight: 600; }
+header p { font-size: 0.75rem; opacity: 0.85; }
+.nav { display: flex; background: white; border-bottom: 1px solid #eee; position: sticky; top: 52px; z-index: 99; overflow-x: auto; }
+.nav button { flex: 1; min-width: 70px; padding: 12px 8px; border: none; background: none; font-family: inherit; font-size: 0.7rem; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; }
+.nav button.active { color: var(--teal); border-bottom-color: var(--teal); }
+.screen { display: none; padding: 16px; }
+.screen.active { display: block; }
+.card { background: var(--card); border-radius: 16px; padding: 16px; margin-bottom: 14px; box-shadow: var(--shadow); border: 1px solid #f0f0f0; }
+.card h2 { font-size: 1rem; margin-bottom: 8px; color: var(--teal); }
+.machines { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.machine-btn { background: white; border: 2px solid #eee; border-radius: 12px; padding: 14px 10px; text-align: center; cursor: pointer; font-family: inherit; font-size: 0.8rem; font-weight: 600; }
+.machine-btn.selected { border-color: var(--teal); background: #f0fafa; color: var(--teal); }
+.btn { background: var(--teal); color: white; border: none; padding: 12px 18px; border-radius: 10px; font-family: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+.btn.secondary { background: white; color: var(--teal); border: 1px solid var(--teal); }
+</style>
 </head>
 <body>
-<h1>Sewing Studio AI Prototype</h1>
-<p>Full interactive prototype coming in next commit. Repo is ready for Netlify deploy.</p>
+<div class="app">
+<header>
+  <h1>Sewing Studio AI</h1>
+  <p>Guided help for your machine — full prototype</p>
+</header>
+<nav class="nav">
+  <button class="active" data-screen="home">Home</button>
+  <button data-screen="tutorials">Tutorials</button>
+  <button data-screen="profile">Profile</button>
+</nav>
+<div class="screen active" id="home">
+  <div class="card">
+    <h2>Select your machine</h2>
+    <div class="machines">
+      <button class="machine-btn selected" data-machine="Brother">Brother</button>
+      <button class="machine-btn" data-machine="Bernette b59">Bernette b59</button>
+    </div>
+    <p id="machine-note" style="margin-top:12px;font-size:0.8rem;color:var(--teal);">Selected: Brother</p>
+  </div>
+  <div class="card">
+    <h2>Full interactive prototype</h2>
+    <p>The complete single-file app (machine selection, guided b59 embroidery setup, manual upload with versioning, semantic search prep, photo analysis, Ask, materials, gallery) is ready locally and will be expanded here. This commit establishes the live site structure on GitHub for Netlify.</p>
+    <p style="margin-top:8px">Open the Tutorials tab for the b59 Embroidery Setup guide.</p>
+  </div>
+</div>
+<div class="screen" id="tutorials">
+  <div class="card">
+    <h2>b59 Embroidery Setup</h2>
+    <p>From unbox to ready to stitch — follows the official manual visuals.</p>
+    <ol style="padding-left:18px;margin-top:8px;font-size:0.85rem;line-height:1.6">
+      <li>Switch on & select Embroidery mode on the Home Screen.</li>
+      <li>Attach the Embroidery Module (slides in from left to right until it clicks).</li>
+      <li>Fit the Hopper Embroidery Foot and embroidery needle.</li>
+      <li>Prepare the hoop with the template and hoop the fabric taut.</li>
+      <li>Attach the hoop to the module until it clicks and is recognised.</li>
+      <li>Thread bobbin and upper embroidery thread.</li>
+      <li>Load design and press start.</li>
+    </ol>
+  </div>
+</div>
+<div class="screen" id="profile">
+  <div class="card">
+    <h2>Machine profile</h2>
+    <p>Select Bernette b59 on Home for the dedicated profile and manual upload area.</p>
+  </div>
+</div>
+</div>
+<script>
+let selectedMachine = "Brother";
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const btn = document.querySelector(`.nav button[data-screen="${id}"]`);
+  if (btn) btn.classList.add('active');
+}
+document.querySelectorAll('.nav button').forEach(btn => {
+  btn.addEventListener('click', () => showScreen(btn.dataset.screen));
+});
+document.querySelectorAll('.machine-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.machine-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedMachine = btn.dataset.machine;
+    document.getElementById('machine-note').textContent = `Selected: ${selectedMachine}`;
+  });
+});
+</script>
 </body>
 </html>
