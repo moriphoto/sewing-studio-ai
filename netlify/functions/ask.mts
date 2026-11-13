@@ -2,7 +2,7 @@
 // No API key is handled here: on Netlify the gateway injects ANTHROPIC_API_KEY / ANTHROPIC_BASE_URL at runtime.
 // If those are missing the function answers { configured: false } and the app falls back to local search.
 import Anthropic from '@anthropic-ai/sdk';
-import { search, machineName } from '../../js/search.js';
+import { search, machineName, knownMachine, machineKind, machineFacts } from '../../js/search.js';
 
 const MAX_Q = 1000;
 const MAX_IMG_B64 = 1_800_000; // ~1.3 MB of image data
@@ -17,9 +17,9 @@ const env = (k: string): string | undefined => {
 };
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' } });
 
-const SYSTEM = (machine: string, generic: boolean, ctx: string) => `You are the helper inside "Sewing Studio AI", an app used by staff and customers of The Sewing Studio in Redruth, Cornwall. You help people use domestic sewing and embroidery machines.
+const SYSTEM = (machine: string, kind: string, facts: string, ctx: string) => `You are the helper inside "Sewing Studio AI", an app used by staff and customers of The Sewing Studio in Redruth, Cornwall. You help people use domestic sewing and embroidery machines.
 
-Selected machine: ${machine}${generic ? ' (the app only has a generic layout for this brand, so keep model-specific claims cautious and point to the official manual)' : ' (the studio\'s main machine; the app has detailed guides and diagrams for it)'}.
+Selected machine: ${machine}${kind === 'generic' ? ' (the app only has a generic layout for this brand, so keep model-specific claims cautious and point to the official manual)' : kind === 'model' ? ' (the app has its own guides and diagrams written for this exact model; some details may be marked as unverified, so stay cautious about anything not in the content below)' : ' (the studio\'s main machine; the app has detailed guides and diagrams for it)'}.${facts ? `\nKnown facts about this model: ${facts}` : ''}
 
 How to answer:
 - Be practical, friendly and brief (under about 170 words). Use short numbered steps for procedures. British English.
@@ -50,7 +50,7 @@ export async function handle(req: Request, deps: { client?: any } = {}): Promise
   const question = String(body?.question ?? '').trim();
   if (!question && !body?.image) return json({ error: 'Please type a question.' }, 400);
   if (question.length > MAX_Q) return json({ error: `Please keep questions under ${MAX_Q} characters.` }, 400);
-  const machineId = ['b59', 'brother', 'bernina', 'janome'].includes(body?.machine) ? body.machine : 'b59';
+  const machineId = typeof body?.machine === 'string' && knownMachine(body.machine) ? body.machine : 'b59';
   const history = (Array.isArray(body?.history) ? body.history : []).slice(-4)
     .filter((h: any) => h && (h.role === 'user' || h.role === 'assistant') && typeof h.text === 'string' && h.text.trim())
     .map((h: any) => ({ role: h.role, text: h.text.slice(0, 800) }));
@@ -67,8 +67,7 @@ export async function handle(req: Request, deps: { client?: any } = {}): Promise
   if (!deps.client && !apiKey) return json({ configured: false, note: 'AI is not switched on for this site yet.' });
 
   const { ctx, ids } = buildContext(question || 'photo of my machine', machineId, history);
-  const generic = machineId !== 'b59';
-  const system = SYSTEM(machineName(machineId), generic, ctx);
+  const system = SYSTEM(machineName(machineId), machineKind(machineId), machineFacts(machineId), ctx);
 
   const messages: any[] = history.map((h: any) => ({ role: h.role, content: h.text }));
   while (messages.length && messages[0].role !== 'user') messages.shift();

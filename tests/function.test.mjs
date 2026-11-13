@@ -30,4 +30,15 @@ r = await mod.handle(post({ question: 'zipper foot?' }), { client: stub(() => { 
 assert.equal((await r.json()).configured, false);
 r = await mod.handle(post({ question: 'zipper foot?' }), { client: stub(() => { const e = new Error('rl'); e.status = 429; throw e; }) });
 assert.equal(r.status, 429);
+// per-model machine ids are accepted and get model-specific context; junk ids fall back to the b59
+const ok = () => ({ content: [{ type: 'text', text: 'ok' }], model: 'stub' });
+r = await mod.handle(post({ question: 'How do I thread the loopers with air?', machine: 'bernette-b64-airlock' }), { client: stub(ok) });
+assert.equal(r.status, 200);
+assert.ok(seen.system.includes('Selected machine: b64') || /Selected machine: bernette b64/i.test(seen.system), 'model name in prompt');
+assert.ok(seen.system.includes('g:bernette-b64-airlock~threading#'), 'model guide ids in context');
+assert.ok(seen.system.includes('Known facts about this model'));
+r = await mod.handle(post({ question: 'bobbin?', machine: 'not-a-machine' }), { client: stub(ok) });
+assert.ok(/Selected machine: .*b59/i.test(seen.system));
+r = await mod.handle(post({ question: 'bobbin?', machine: 'janome' }), { client: stub(ok) });
+assert.ok(seen.system.includes('generic layout'));
 console.log('function tests passed; bundle size', (await import('node:fs')).statSync(out).size);
