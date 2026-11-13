@@ -1,7 +1,8 @@
 // Local keyword search over the in-app content. Shared by the browser (offline fallback)
 // and by the Netlify Function (to ground the AI answer). Pure JS, no DOM.
-import { VIEWS, ACCESSORIES, MACHINES, MANUAL_LINKS, B59_PAGES } from './content.js';
-import { GUIDES } from './guides.js';
+import { VIEWS } from './content.js';
+import { MODELS } from './machines/index.js';
+import { MACHINES, allGuides, viewsFor, allAccessories, linksFor, pagesFor, isModel } from './registry.js';
 
 const SYN = {
   bobbin: ['bobbin', 'lower', 'underthread', 'winding', 'wind'], thread: ['thread', 'threading', 'upper', 'spool', 'tension'],
@@ -26,7 +27,7 @@ let INDEX = null;
 export function buildIndex() {
   if (INDEX) return INDEX;
   const items = [];
-  for (const g of GUIDES) {
+  for (const g of allGuides()) {
     g.steps.forEach((s, i) => items.push({
       kind: 'guide', id: `g:${g.id}#${i + 1}`, title: `${g.title} – step ${i + 1}: ${s.t}`, body: [s.b, s.tip, s.warn, (s.check || []).join('. ')].filter(Boolean).join(' '),
       machines: g.machines, link: `#/guide/${g.id}/${i + 1}`, label: `${g.title}, step ${i + 1}`
@@ -38,11 +39,17 @@ export function buildIndex() {
       link: `#/machine/${v.id}/${p.id}`, label: `${p.name} on the ${v.title} diagram`
     });
   }
-  for (const a of ACCESSORIES) items.push({
+  for (const m of MODELS) {
+    for (const v of viewsFor(m.id)) for (const p of v.parts) items.push({
+      kind: 'diagram', id: `d:${m.id}.${v.id}#${p.id}`, title: `${p.name} (${m.short || m.name} diagram: ${v.title})`, body: p.text, machines: [m.id],
+      link: `#/machine/${v.id}/${p.id}`, label: `${p.name} on the ${m.short || m.name} ${v.title} diagram`
+    });
+  }
+  for (const a of allAccessories()) items.push({
     kind: 'gear', id: `a:${a.id}`, title: `${a.name} (${a.cat})`, body: [a.what, a.when.join('. '), a.fit.join(' '), a.tip].filter(Boolean).join(' '),
     machines: [a.m === 'all' ? 'all' : a.m], link: `#/gear/${a.id}`, label: a.name
   });
-  for (const t of B59_PAGES) items.push({ kind: 'manual', id: `m:b59#${t.page}`, title: `Official b59 manual, page ${t.page}: ${t.topic}`, body: t.keys, machines: ['b59'], link: `#/manuals?page=${t.page}`, label: `b59 manual p.${t.page}` });
+  for (const mm of MACHINES.filter(x => x.id === 'b59' || x.model)) for (const t of pagesFor(mm.id)) { const nm = mm.id === 'b59' ? 'b59' : (mm.short || mm.name); const pg = t.pdfPage || t.page; items.push({ kind: 'manual', id: `m:${mm.id}#${t.page}`, title: `Official ${nm} manual, page ${t.page}: ${t.topic}`, body: t.keys, machines: [mm.id], link: `#/manuals?page=${pg}`, label: `${nm} manual p.${t.page}` }); }
   INDEX = items.map(it => ({ ...it, tt: expand(tokens(it.title)), bt: expand(tokens(it.body)) }));
   return INDEX;
 }
@@ -50,7 +57,7 @@ export function buildIndex() {
 export function search(query, machine = 'b59', limit = 8) {
   const q = expand(tokens(query));
   if (!q.length) return [];
-  const generic = machine !== 'b59';
+  const generic = machine !== 'b59' && !isModel(machine);
   const res = [];
   for (const it of buildIndex()) {
     const ok = it.machines.includes('all') || it.machines.includes(machine) || (generic && it.machines.includes('generic'));
@@ -67,8 +74,17 @@ export function search(query, machine = 'b59', limit = 8) {
 }
 
 export const machineName = (id) => (MACHINES.find(m => m.id === id) || {}).name || id;
-export const manualLinks = (id) => MANUAL_LINKS[id] || [];
+export const manualLinks = (id) => linksFor(id);
 export function resolveRef(id) {
   const it = buildIndex().find(x => x.id === id);
   return it ? { id, link: it.link, label: it.label } : null;
+}
+
+// What the AI function needs to know about the selected machine.
+export const knownMachine = (id) => MACHINES.some(m => m.id === id);
+export const machineKind = (id) => (id === 'b59' ? 'b59' : isModel(id) ? 'model' : 'generic');
+export function machineFacts(id) {
+  const m = MACHINES.find(x => x.id === id);
+  if (!m || !m.model) return '';
+  return [m.blurb, ...(m.facts || []).map(f => (typeof f === 'string' ? f : `${f.k || f.label || ''}: ${f.v || f.value || ''}`))].filter(Boolean).join(' ').slice(0, 700);
 }

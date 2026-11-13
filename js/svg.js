@@ -78,22 +78,22 @@ function back() {
   return { vb: [640, 360], svg: s, anchors: { handle: [291, 24], penHolder: [455, 50], handwheelB: [33, 148], lifter: [529, 105], powerSwitch: [106, 274], powerSocket: [163, 275], footSocket: [98, 312], usb: [155, 312], sewingTableB: [345, 303] } };
 }
 
-function head() {
+function head(o = {}) {
   let s = '';
   s += PA('M70,70 Q70,30 112,30 H350 Q392,30 392,70 V270 Q392,300 362,300 H230 V352 H104 V300 Q70,300 70,270 Z', C.body, C.line, 2);
   // spool (horizontal pin on top right, drawn side-on)
   s += P('spoolPin', `${R(398, 52, 54, 12, 3, C.metal)}${R(416, 36, 16, 44, 3, '#cfa3dc', '#8d5fa0', 1)}${R(412, 32, 24, 7, 3, C.metal2)}${R(412, 77, 24, 7, 3, C.metal2)}`);
   s += P('spoolCap', `${PA('M438,40 l12,-6 v48 l-12,-6 z', C.metal2)}`);
-  s += P('felt', `${R(404, 44, 8, 28, 2, '#e8d6a2', '#a18a45', 1)}`);
+  if (!o.noFelt) s += P('felt', `${R(404, 44, 8, 28, 2, '#e8d6a2', '#a18a45', 1)}`);
   s += P('guideEyelet', `${CI(350, 60, 8, '#ffffff', C.line, 2)}${R(346, 62, 8, 10, 2, C.metal)}`);
   s += P('rearGuide', `${R(286, 46, 30, 22, 4, C.metal2)}${PA('M290,68 q11,14 22,0', 'none', C.dark, 2)}`);
   s += P('tension', `${CI(250, 140, 26, C.metal2, C.line, 2)}${CI(250, 140, 16, '#ffffff')}${L(250, 140, 250, 128, C.tealD, 3)}${L(224, 140, 276, 140, 'none', 0)}`);
-  s += P('pressureDial', `${CI(330, 170, 16, C.metal2)}${L(330, 170, 330, 158, C.dark, 3)}`);
+  if (!o.noPressure) s += P('pressureDial', `${CI(330, 170, 16, C.metal2)}${L(330, 170, 330, 158, C.dark, 3)}`);
   s += P('takeup', `${R(124, 76, 74, 26, 13, '#2b3f41', C.line, 1.5)}${L(161, 79, 161, 99, C.fawn, 5)}`);
   s += P('takeupCover', `${PA('M198,96 q22,0 22,26 v70 q0,16 -16,16 h-60 q-16,0 -16,-16 v-60', 'none', '#7a8e90', 3)}`);
   s += P('needleGuides', `${R(138, 196, 18, 8, 2, C.metal)}${R(138, 226, 18, 8, 2, C.metal)}${PA('M124,256 h40 v14 h-40 z', C.metal2)}${L(136, 256, 136, 270, C.dark, 1.5)}${L(152, 256, 152, 270, C.dark, 1.5)}`);
   s += P('cutter', `${R(84, 276, 28, 14, 5, C.metal2)}${PA('M90,280 l12,6 M102,280 l-12,6', 'none', C.dark, 1.5)}`);
-  s += P('threader', `${R(92, 300, 14, 40, 5, C.metal)}`);
+  if (!o.noThreader) s += P('threader', `${R(92, 300, 14, 40, 5, C.metal)}`);
   s += P('needle', `${L(146, 300, 146, 346, C.dark, 3.5)}${PA('M143,342 l3,10 l3,-10 z', C.dark, C.dark, 1)}`);
   s += P('bobbinWinderTop', `${R(300, 220, 56, 34, 6, C.metal2)}${CI(328, 237, 10, '#cfe')}`);
   // thread path
@@ -104,14 +104,14 @@ function head() {
   return { vb: [480, 370], svg: s, anchors: { spoolPin: [425, 58], spoolCap: [444, 58], felt: [408, 58], guideEyelet: [350, 60], rearGuide: [301, 58], tension: [250, 140], pressureDial: [330, 170], takeup: [161, 89], takeupCover: [212, 160], needleGuides: [147, 230], cutter: [98, 283], threader: [99, 320], needle: [146, 330] } };
 }
 
-function needleArea() {
+function needleArea(o = {}) {
   let s = '';
   s += R(110, -10, 190, 112, 14, C.body, C.line, 2);
   s += R(60, 300, 320, 90, 8, C.body, C.line, 2);
   s += P('needleBar', R(205, 70, 10, 100, 2, C.metal));
   s += P('presserBar', R(234, 70, 12, 96, 2, C.metal));
-  s += P('threader', `${R(142, 112, 20, 50, 7, C.metal, C.line, 1.6)}${L(152, 118, 152, 156, C.dark, 1.3)}`);
-  s += P('buttonholeLever', `${R(284, 96, 10, 54, 3, C.metal2)}${R(278, 140, 22, 12, 4, C.dark)}`);
+  if (!o.noThreader) s += P('threader', `${R(142, 112, 20, 50, 7, C.metal, C.line, 1.6)}${L(152, 118, 152, 156, C.dark, 1.3)}`);
+  if (!o.noButtonholeLever) s += P('buttonholeLever', `${R(284, 96, 10, 54, 3, C.metal2)}${R(278, 140, 22, 12, 4, C.dark)}`);
   s += P('needleHolder', R(194, 132, 32, 36, 4, '#5a7274', C.line, 1.6));
   s += P('needleScrew', `${CI(232, 148, 6, C.metal2, C.line, 1.6)}${L(228, 148, 236, 148, C.dark, 1.4)}`);
   s += P('footHolder', R(220, 164, 44, 22, 4, '#5a7274', C.line, 1.6));
@@ -122,7 +122,7 @@ function needleArea() {
   s += P('stitchPlate', `${PA('M100,262 H340 L376,306 H64 Z', C.metal, C.line, 1.8)}${CI(210, 282, 6, '#37484a', C.dark, 1)}`);
   s += P('feedDog', `${PA('M170,274 H252 V288 H170 Z', '#aab7b9', C.line, 1.2)}${[...Array(9)].map((_, i) => L(174 + i * 9, 276, 174 + i * 9, 286, C.dark, 1.2)).join('')}`);
   s += P('bobbinCover', `${PA('M270,270 H334 L350,296 H258 Z', C.clear, C.line, 1.6)}${R(290, 292, 22, 8, 3, C.metal2, C.line, 1.2)}`);
-  s += P('plateRelease', `${R(336, 312, 30, 14, 5, C.metal2, C.line, 1.6)}`);
+  if (!o.noPlateRelease) s += P('plateRelease', `${R(336, 312, 30, 14, 5, C.metal2, C.line, 1.6)}`);
   return { vb: [420, 390], svg: s, anchors: { needleBar: [210, 100], presserBar: [240, 100], threader: [152, 130], buttonholeLever: [289, 120], needleHolder: [210, 150], needleScrew: [232, 148], footHolder: [242, 176], footScrew: [274, 174], needle: [210, 220], footSole: [200, 202], crossPin: [238, 196], stitchPlate: [128, 282], feedDog: [212, 281], bobbinCover: [304, 280], plateRelease: [351, 319] } };
 }
 
@@ -297,14 +297,123 @@ function controls() {
   s += P('needlePosLR', `${CI(562, 98, 17, C.metal2, C.line, 2)}${PA('M552,98 h6 m-3,-4 l-4,4 l4,4 M572,98 h-6 m3,-4 l4,4 l-4,4', 'none', C.dark, 1.8)}`);
   s += R(40, 214, 250, 82, 16, C.body, C.line, 2);
   s += T(165, 232, 'buttons above the needle', 10.5, '#678', 'middle', 500);
-  s += P('startStop', `${R(62, 244, 62, 36, 12, '#d7efe6', C.tealD, 2)}${PA('M85,252 l14,10 l-14,10 z', C.tealD, C.tealD, 1)}`);
+  s += P('startStop', `${CI(104, 118, 10, '#d7efe6', C.tealD, 1.6)}${PA('M100,113 l9,5 l-9,5 z', C.tealD, C.tealD, 1)}`);
   s += P('cutterBtn', `${R(134, 244, 62, 36, 12, C.metal2, C.line, 2)}${PA('M158,254 l14,16 M172,254 l-14,16', 'none', C.dark, 2.2)}`);
   s += P('quickReverse', `${R(206, 244, 62, 36, 12, C.metal2, C.line, 2)}${PA('M252,262 h-30 m8,-8 l-8,8 l8,8', 'none', C.dark, 2.2)}`);
   s += P('threader', `${R(340, 214, 40, 82, 16, C.metal, C.line, 2)}${L(360, 228, 360, 282, C.dark, 3)}${T(360, 310, 'threader lever', 10, '#678', 'middle', 500)}`);
   return { vb: [640, 320], svg: s, anchors: { needleUpDown: [120, 52], securing: [120, 98], speedSlider: [120, 138], homeBtn: [470, 52], widthBtn: [516, 52], lockBtn: [562, 52], lengthBtn: [470, 98], resetBtn: [516, 98], needlePosLR: [562, 98], startStop: [93, 262], cutterBtn: [165, 262], quickReverse: [237, 262], threader: [360, 250] } };
 }
 
-export const SCENES = { front, back, head, needleArea, needle, foot, bobbinWind, bobbinCase, module, hoop, hoopOn, screen, controls };
+
+/* ---------- extra scenes for per-machine breakdowns ---------- */
+// Machine with a screen + buttons (and optionally two multi-function knobs).
+function frontPanel(o = {}) {
+  let s = '';
+  s += PA(BODY, C.body, C.line, 2);
+  s += PA('M62,80 Q62,58 80,58 H570 Q596,58 596,84', 'none', '#ffffff', 3);
+  s += P('spoolPin', `${R(318, 36, 14, 24, 2, C.metal)}${R(292, 22, 66, 18, 5, '#e9d9ee')}${R(298, 24, 54, 14, 3, '#cfa3dc', '#8d5fa0', 1)}${R(286, 40, 78, 5, 2, C.metal)}`);
+  s += P('takeup', `${R(92, 70, 88, 20, 10, '#2b3f41', C.line, 1.4)}${L(136, 72, 136, 88, C.fawn, 4)}`);
+  s += P('threader', `${R(54, 168, 16, 36, 6, C.metal)}${L(62, 172, 62, 200, C.dark, 1.2)}`);
+  s += P('cutter', `${R(54, 206, 16, 22, 6, C.metal2)}${PA('M58,212 l8,10 M66,212 l-8,10', 'none', C.dark, 1.4)}`);
+  s += P('lighting', `${R(86, 236, 100, 5, 2.5, '#FFE9A8', '#c79a25', 1)}`);
+  s += P('needleArea', `${R(124, 150, 12, 82, 2, C.metal)}${R(104, 224, 54, 22, 4, C.metal2)}${L(130, 232, 130, 266, C.dark, 3)}${PA('M127,262 l3,9 l3,-9 z', C.dark, C.dark, 1)}`);
+  s += P('stitchPlate', `${R(70, 272, 130, 9, 2, C.metal)}`);
+  s += P('feedDog', `${R(150, 304, 46, 14, 7, C.metal2)}${CI(162, 311, 4, C.dark, C.dark, 1)}${L(172, 311, 190, 311, C.dark, 1.2)}`);
+  if (!o.noModule) s += P('moduleSocket', `${R(42, 288, 14, 40, 3, C.dark)}${L(46, 296, 52, 296, C.metal, 2)}${L(46, 304, 52, 304, C.metal, 2)}${L(46, 312, 52, 312, C.metal, 2)}`);
+  s += P('handwheel', `${R(594, 112, 26, 70, 8, C.metal2)}${L(600, 120, 600, 174, '#b3bfc1', 1.2)}${L(606, 120, 606, 174, '#b3bfc1', 1.2)}`);
+  const sc = o.small ? [330, 90, 110, 56] : [290, 80, 180, 84];
+  s += P('screen', `${R(sc[0], sc[1], sc[2], sc[3], 10, C.screen, C.dark, 2)}${R(sc[0] + 10, sc[1] + 10, sc[2] / 3 - 8, 18, 4, '#2c6a6a', '#2c6a6a', 1)}${R(sc[0] + sc[2] / 3 + 6, sc[1] + 10, sc[2] / 3 - 8, 18, 4, '#2c6a6a', '#2c6a6a', 1)}${R(sc[0] + 10, sc[1] + 34, sc[2] - 20, sc[3] - 44, 4, '#244e50', '#244e50', 1)}`);
+  s += P('speedSlider', `${R(228, 152, 56, 8, 4, C.metal)}${CI(250, 156, 7, C.teal, C.tealD, 1.2)}`);
+  s += P('sideButtons', `${CI(240, 92, 9, C.metal2)}${CI(240, 120, 9, C.metal2)}${CI(268, 92, 9, C.metal2)}${CI(268, 120, 9, C.metal2)}`);
+  if (o.knobs) {
+    s += P('knobUpper', `${CI(510, 100, 20, C.metal2, C.line, 1.8)}${L(510, 100, 510, 84, C.tealD, 3)}`);
+    s += P('knobLower', `${CI(556, 140, 20, C.metal2, C.line, 1.8)}${L(556, 140, 556, 124, C.tealD, 3)}`);
+  } else {
+    s += P('panelButtons', `${CI(494, 96, 10, C.metal2)}${CI(526, 96, 10, C.metal2)}${CI(558, 96, 10, C.metal2)}${CI(494, 128, 10, C.metal2)}${CI(526, 128, 10, C.metal2)}${CI(558, 128, 10, C.metal2)}`);
+  }
+  s += P('funcButtons', `${CI(96, 118, 10, '#d7efe6', C.tealD, 1.6)}${PA('M92,113 l9,5 l-9,5 z', C.tealD, C.tealD, 1)}${CI(130, 118, 10, C.metal2)}${PA('M125,118 h10 M127,114 l-4,4 l4,4', 'none', C.dark, 1.6)}${CI(164, 118, 10, C.metal2)}${PA('M159,113 l10,10 M169,113 l-10,10', 'none', C.dark, 1.6)}`);
+  const a = { spoolPin: [325, 30], takeup: [136, 80], threader: [62, 186], cutter: [62, 217], lighting: [136, 238], needleArea: [130, 190], feedDog: [172, 311], moduleSocket: [49, 308], handwheel: [607, 147], screen: [o.small ? 385 : 380, o.small ? 118 : 122], speedSlider: [256, 168], sideButtons: [254, 106], funcButtons: [130, 118] };
+  if (o.knobs) { a.knobUpper = [510, 100]; a.knobLower = [556, 140]; } else a.panelButtons = [526, 112];
+  return { vb: [640, 360], svg: s, anchors: a };
+}
+
+// Mechanical machine: dials and levers.
+function frontMech(o = {}) {
+  let s = '';
+  s += PA(BODY, C.body, C.line, 2);
+  s += PA('M62,80 Q62,58 80,58 H570 Q596,58 596,84', 'none', '#ffffff', 3);
+  s += P('spoolPin', `${R(318, 36, 14, 24, 2, C.metal)}${R(292, 22, 66, 18, 5, '#e9d9ee')}${R(298, 24, 54, 14, 3, '#cfa3dc', '#8d5fa0', 1)}${R(286, 40, 78, 5, 2, C.metal)}`);
+  s += P('takeup', `${R(92, 70, 88, 20, 10, '#2b3f41', C.line, 1.4)}${L(136, 72, 136, 88, C.fawn, 4)}`);
+  s += P('tensionDial', `${CI(236, 100, 24, C.metal2, C.line, 1.8)}${CI(236, 100, 14, C.body)}${L(236, 100, 236, 84, C.tealD, 3)}${T(236, 140, 'tension', 10, '#678', 'middle', 500)}`);
+  s += P('stitchDial', `${CI(334, 112, 34, C.metal2, C.line, 1.8)}${CI(334, 112, 22, C.body)}${L(334, 112, 334, 86, C.tealD, 3.4)}${[...Array(10)].map((_, i) => L(334 + 30 * Math.cos(i * .628), 112 + 30 * Math.sin(i * .628), 334 + 36 * Math.cos(i * .628), 112 + 36 * Math.sin(i * .628), C.line, 1.2)).join('')}`);
+  s += P('lengthDial', `${CI(430, 98, 22, C.metal2, C.line, 1.8)}${CI(430, 98, 13, C.body)}${L(430, 98, 430, 83, C.tealD, 3)}${T(430, 134, 'length', 10, '#678', 'middle', 500)}`);
+  if (!o.noWidth) s += P('widthDial', `${CI(500, 98, 22, C.metal2, C.line, 1.8)}${CI(500, 98, 13, C.body)}${L(500, 98, 500, 83, C.tealD, 3)}${T(500, 134, 'width', 10, '#678', 'middle', 500)}`);
+  s += P('reverseLever', `${R(540, 92, 44, 22, 8, C.metal2)}${PA('M574,103 h-24 m7,-7 l-7,7 l7,7', 'none', C.dark, 1.8)}`);
+  if (!o.noPressure) s += P('pressureDial', `${CI(158, 50, 12, C.metal2, C.line, 1.6)}${L(158, 50, 158, 40, C.tealD, 2.4)}`);
+  if (!o.noThreader) s += P('threader', `${R(54, 168, 16, 36, 6, C.metal)}${L(62, 172, 62, 200, C.dark, 1.2)}`);
+  s += P('lighting', `${R(86, 236, 100, 5, 2.5, '#FFE9A8', '#c79a25', 1)}`);
+  s += P('needleArea', `${R(124, 150, 12, 82, 2, C.metal)}${R(104, 224, 54, 22, 4, C.metal2)}${L(130, 232, 130, 266, C.dark, 3)}${PA('M127,262 l3,9 l3,-9 z', C.dark, C.dark, 1)}`);
+  s += P('stitchPlate', `${R(70, 272, 130, 9, 2, C.metal)}`);
+  s += P('feedDog', `${R(150, 304, 46, 14, 7, C.metal2)}${CI(162, 311, 4, C.dark, C.dark, 1)}${L(172, 311, 190, 311, C.dark, 1.2)}`);
+  s += P('handwheel', `${R(594, 112, 26, 70, 8, C.metal2)}${L(600, 120, 600, 174, '#b3bfc1', 1.2)}${L(606, 120, 606, 174, '#b3bfc1', 1.2)}`);
+  s += P('bobbinCover', `${R(210, 276, 90, 38, 6, C.clear, C.line, 1.6)}${CI(255, 295, 9, '#ffffff', C.line, 1.2)}`);
+  if (!o.noStart) s += P('startStop', `${CI(104, 118, 10, '#d7efe6', C.tealD, 1.6)}${PA('M100,113 l9,5 l-9,5 z', C.tealD, C.tealD, 1)}`);
+  return { vb: [640, 360], svg: s, anchors: { spoolPin: [325, 30], takeup: [136, 80], tensionDial: [236, 100], stitchDial: [334, 112], lengthDial: [430, 98], widthDial: [500, 98], reverseLever: [562, 103], pressureDial: [158, 50], ...(o.noThreader ? {} : { threader: [62, 186] }), lighting: [136, 238], needleArea: [130, 190], feedDog: [172, 311], handwheel: [607, 147], bobbinCover: [255, 295], startStop: [104, 118] } };
+}
+
+// Overlocker (front/top view, simplified).
+function lockFront() {
+  let s = '';
+  s += PA('M70,110 H540 Q560,110 560,130 V320 Q560,336 544,336 H80 Q60,336 60,316 V130 Q60,110 70,110 Z', C.body, C.line, 2);
+  s += P('spoolStands', [150, 235, 320, 405].map((x, i) => `${R(x, 26, 6, 60, 2, C.metal)}${PA(`M${x - 20},82 L${x + 3},34 L${x + 26},82 Z`, ['#d6456b', '#3F72C9', '#e5a361', '#4aa37a'][i], C.line, 1.2)}`).join('') + R(120, 84, 330, 8, 3, C.metal2));
+  s += P('threadGuides', `${R(110, 96, 350, 8, 3, C.metal, C.line, 1.2)}${[150, 235, 320, 405].map(x => CI(x + 3, 100, 5, '#fff', C.line, 1.4)).join('')}`);
+  s += P('tensionDials', [150, 235, 320, 405].map((x, i) => `${CI(x, 150, 20, C.metal2, C.line, 1.8)}${CI(x, 150, 11, C.body)}${L(x, 150, x, 136, C.tealD, 3)}${T(x, 188, ['L1', 'L2', 'N1', 'N2'][i], 10, '#678', 'middle', 600)}`).join(''));
+  s += P('looperCover', `${R(72, 210, 140, 100, 10, C.clear, C.line, 1.8)}${R(80, 218, 124, 84, 6, '#f6fcfd', '#9fc5c5', 1)}${T(142, 264, 'looper cover', 10, '#678', 'middle', 500)}`);
+  s += P('needleFoot', `${R(224, 214, 10, 80, 2, C.metal)}${R(206, 286, 46, 20, 4, C.metal2)}${L(229, 294, 229, 322, C.dark, 3)}`);
+  s += P('footLifter', `${R(264, 216, 38, 20, 6, C.metal2)}${PA('M272,214 v-16 h22 v16', 'none', C.dark, 2)}`);
+  s += P('diffFeed', `${R(330, 214, 80, 14, 6, C.metal2)}${CI(355, 221, 7, C.teal, C.tealD, 1.2)}${T(370, 248, 'differential feed', 10, '#678', 'middle', 500)}`);
+  s += P('stitchLength', `${CI(470, 240, 22, C.metal2, C.line, 1.8)}${CI(470, 240, 12, C.body)}${L(470, 240, 470, 226, C.tealD, 3)}${T(470, 280, 'length', 10, '#678', 'middle', 500)}`);
+  s += P('rolledHem', `${R(328, 262, 60, 20, 8, C.metal2)}${T(358, 276, 'N  R', 11, C.dark, 'middle', 700)}`);
+  s += P('handwheel', `${R(556, 160, 28, 80, 9, C.metal2)}${L(563, 168, 563, 232, '#b3bfc1', 1.2)}${L(571, 168, 571, 232, '#b3bfc1', 1.2)}`);
+  s += P('powerSwitch', `${R(500, 296, 36, 22, 5, C.dark)}${R(510, 300, 14, 14, 3, '#e8fff6', C.tealD, 1.2)}`);
+  return { vb: [640, 360], svg: s, anchors: { spoolStands: [277, 40], threadGuides: [277, 100], tensionDials: [277, 150], looperCover: [142, 242], needleFoot: [229, 252], footLifter: [283, 226], diffFeed: [370, 221], stitchLength: [470, 240], rolledHem: [358, 272], handwheel: [570, 200], powerSwitch: [518, 307] } };
+}
+
+// Overlocker looper area with the colour-coded thread paths.
+function lockLooperCover() {
+  let s = '';
+  s += R(20, 20, 420, 320, 14, '#eef6f6', C.line, 1.6);
+  s += P('feedDog', `${R(150, 272, 130, 12, 3, C.metal2)}${[0, 1, 2, 3, 4, 5, 6, 7].map(i => L(156 + i * 16, 272, 156 + i * 16, 284, C.dark, 1.2)).join('')}`);
+  s += P('presserFoot', `${R(150, 244, 140, 20, 6, '#d8e4e5', C.line, 1.6)}${R(196, 214, 30, 30, 4, C.metal)}`);
+  const nd = (x) => `${R(x, 120, 7, 126, 2, C.metal)}${PA(`M${x},246 l3.5,12 l3.5,-12 z`, C.dark, C.dark, 1)}`;
+  s += P('needleL', nd(214)); s += P('needleC', nd(237)); s += P('needleR', nd(260));
+  s += P('lowerLooper', `${PA('M360,236 Q300,268 230,258', 'none', C.line, 9)}${PA('M360,236 Q300,268 230,258', 'none', '#e3eaeb', 5)}${CI(360, 236, 5, '#fff', C.line, 1.2)}`);
+  s += `<g fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"><path d="M380,40 V238" stroke="#8a5bc9"/><path d="M217,40 V120" stroke="#e5c34a"/><path d="M240,40 V120" stroke="#4aa37a"/><path d="M263,40 V120" stroke="#3F72C9"/></g>`;
+  s += P('threadLower', `${L(380, 40, 380, 230, '#8a5bc9', 4)}${T(380, 34, 'L', 11, '#8a5bc9', 'middle', 800)}`);
+  s += P('threadNeedle', `${L(217, 40, 217, 120, '#e5c34a', 4)}${L(240, 40, 240, 120, '#4aa37a', 4)}${L(263, 40, 263, 120, '#3F72C9', 4)}${T(240, 34, 'N', 11, '#7a5a15', 'middle', 800)}`);
+  return { vb: [460, 360], svg: s, anchors: { feedDog: [215, 292], presserFoot: [190, 254], needleL: [217, 180], needleC: [240, 180], needleR: [263, 180], lowerLooper: [318, 252], threadLower: [380, 120], threadNeedle: [240, 70] } };
+}
+function lockLooper(o = {}) {
+  if (o.cover) return lockLooperCover();
+  let s = '';
+  s += R(20, 20, 420, 320, 14, '#eef6f6', C.line, 1.6);
+  s += P('lowerKnife', `${R(60, 250, 70, 10, 3, '#9aa9ab', C.line, 1.4)}`);
+  s += P('upperKnife', `${R(70, 214, 70, 12, 3, C.metal, C.line, 1.4)}${PA('M70,214 l-14,-18 l24,6 z', C.metal, C.line, 1.2)}`);
+  s += P('feedDog', `${R(150, 272, 130, 12, 3, C.metal2)}${[0, 1, 2, 3, 4, 5, 6, 7].map(i => L(156 + i * 16, 272, 156 + i * 16, 284, C.dark, 1.2)).join('')}`);
+  s += P('presserFoot', `${R(150, 244, 140, 20, 6, '#d8e4e5', C.line, 1.6)}${R(200, 214, 30, 30, 4, C.metal)}`);
+  s += P('needleL', `${R(238, 120, 7, 126, 2, C.metal)}${PA('M238,246 l3.5,12 l3.5,-12 z', C.dark, C.dark, 1)}`);
+  s += P('needleR', `${R(262, 120, 7, 126, 2, C.metal)}${PA('M262,246 l3.5,12 l3.5,-12 z', C.dark, C.dark, 1)}`);
+  s += P('stitchFinger', `${R(284, 262, 60, 6, 3, C.metal)}`);
+  s += P('upperLooper', `${PA('M300,70 Q330,86 300,150 Q286,176 252,228', 'none', C.line, 9)}${PA('M300,70 Q330,86 300,150 Q286,176 252,228', 'none', '#e3eaeb', 5)}${CI(300, 70, 5, '#fff', C.line, 1.2)}`);
+  s += P('lowerLooper', `${PA('M360,230 Q300,260 240,254', 'none', C.line, 9)}${PA('M360,230 Q300,260 240,254', 'none', '#e3eaeb', 5)}${CI(360, 230, 5, '#fff', C.line, 1.2)}`);
+  s += `<g fill="none" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6"><path d="M300,40 V70" stroke="#d6456b"/><path d="M380,40 V232" stroke="#3F72C9"/><path d="M241,40 V120" stroke="#e5a361"/><path d="M265,40 V120" stroke="#4aa37a"/></g>`;
+  s += P('threadUpper', `${L(300, 40, 300, 66, '#d6456b', 4)}${T(300, 34, 'U', 11, '#d6456b', 'middle', 800)}`);
+  s += P('threadLower', `${L(380, 40, 380, 226, '#3F72C9', 4)}${T(380, 34, 'L', 11, '#3F72C9', 'middle', 800)}`);
+  s += P('threadNeedle', `${L(241, 40, 241, 120, '#e5a361', 4)}${L(265, 40, 265, 120, '#4aa37a', 4)}${T(253, 34, 'N', 11, '#7a5a15', 'middle', 800)}`);
+  return { vb: [460, 360], svg: s, anchors: { lowerKnife: [95, 255], upperKnife: [105, 220], feedDog: [215, 292], presserFoot: [190, 254], needleL: [241, 180], needleR: [265, 180], stitchFinger: [314, 274], upperLooper: [318, 108], lowerLooper: [318, 246], threadUpper: [300, 52], threadLower: [380, 120], threadNeedle: [253, 70] } };
+}
+
+export const SCENES = { front, back, head, needleArea, needle, foot, bobbinWind, bobbinCase, module, hoop, hoopOn, screen, controls, frontPanel, frontMech, lockFront, lockLooper };
 
 /* ---------- render a scene with highlights + notes ---------- */
 export function renderScene(name, opts = {}) {
