@@ -59,12 +59,24 @@ npx netlify dev                  # to try the function itself (needs the site li
 - `js/svg.js` – original SVG scenes (parts, highlights, arrows) used by diagrams and steps
 - `js/search.js` – local search + reference resolver (shared with the function)
 - `js/manuals.js` – IndexedDB storage + pdf.js viewer
+- `js/registry.js` – single lookup for "what do we know about machine X?" (b59, generic brand layouts, per-model data)
+- `js/machines/<model>.js` – one data file per machine (facts, links, manual pages, part wording, accessories); `index.js` lists them (static imports only)
+- `js/templates.js` – turns a model data file into diagram views and setup guides (profiles: `panel`, `mech`, `lock`)
+- `js/machines/catalog.js` – the shop's full machine list (generated from `data/machine-list.json` by `tools/build-catalog.mjs`); drives the Browse page
+- `js/machines/verified-pages.js` – "where to look in the manual" rows that passed `tools/verify-pages.mjs` (generated; unverified rows never ship)
 - `js/ask.js`, `js/app.js`, `css/app.css`, `sw.js`, `manifest.webmanifest`
+
+## Adding a machine
+
+1. Copy the closest file in `js/machines/` (e.g. `brother-lx25.js` for a mechanical machine), change the facts, links, `t` wording and `gear`, and register it in `js/machines/index.js` and the `SHELL` list in `sw.js`.
+2. Add manual page rows (`manual.pages`: topic, printed page, a phrase that appears on it), then run `node tools/verify-pages.mjs` – only rows that pass are shown in the app.
+3. Run `node tests/function.test.mjs`, then the browser sweeps (`tests/e2e.cjs`, `tests/e2e-machines.cjs` against `python3 -m http.server 8801`).
 
 ## Limitations
 
 - Diagrams are schematic drawings, not photographs, and not to scale.
-- The generic layout for Brother/Bernina/Janome reuses the b59 text with a banner; the embroidery guide is b59-only.
+- Machines without their own file (most of the 155 in the Browse list) fall back to the generic brand layout, which reuses the b59 text with a banner; the embroidery guide is b59 and model-specific only.
+- Janome's manual PDFs sit behind Cloudflare, so for the Janome models the links are not machine-checked and there are no manual page links.
 - No PNG touch icon for iOS (SVG icons only).
 - Releases: bump `VERSION` in `sw.js` on every release so installed copies pick up new files (the service worker serves cached files first, then refreshes them, so users may see the previous version for one load).
 - Marker positions on the diagrams are nudged apart automatically on small screens, with a small leader line back to the real part.
