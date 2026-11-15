@@ -30,7 +30,7 @@ async function sweep(browser, w, h) {
   for (const m of info) {
     await pg.evaluate(id => { localStorage.setItem('ssai.v1', JSON.stringify({ machine: id, progress: {} })); location.hash = '#/'; }, m.id);
     await pg.reload({ waitUntil: 'networkidle0' });
-    assert.ok((await text(pg, 'main')).includes('Welcome'), `${m.id} home`);
+    assert.ok((await text(pg, 'main')).includes('Bobbin'), `${m.id} home`);
     for (const v of m.views) {
       await nav(pg, '#/machine/' + v.id); nViews++;
       const r = await pg.evaluate(() => {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Sewing Studio AI – manuals, machine diagrams, setup guides, accessories and AI help for The Sewing Studio, Redruth.",
+  "description": "Bobbin by The Sewing Studio – manuals, machine diagrams, setup guides, accessories and friendly help for The Sewing Studio, Redruth.",
   "scripts": {
     "test:fn": "node tests/function.test.mjs"
   },
