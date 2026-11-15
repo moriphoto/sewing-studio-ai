@@ -1,5 +1,6 @@
-// Ask AI tab: local keyword search always runs first (works offline); the AI call is on demand only.
+// Ask Bobbin tab: local keyword search always runs first (works offline); the helper call is on demand only.
 import { search, resolveRef } from './search.js';
+import { mascotSvg, mountThinking, ASK_LINES } from './mascot.js';
 
 const esc = (s = '') => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const SUGGEST = ['Why does my thread keep breaking?', 'Which needle for stretchy jersey?', 'How do I hoop fabric for embroidery?', 'The bobbin thread is looping underneath'];
@@ -35,12 +36,12 @@ export function formatAnswer(text, refs = []) {
 export function mountAsk(root, ctx) {
   const history = []; let image = null; let busy = false; let preview = '';
   const m = () => ctx.machine();
-  root.innerHTML = `<h1 class="page">Ask AI</h1><p class="lead">Ask about <strong id="am">${esc(m().name)}</strong> – your question and any photo go to the AI only when you press Ask. Answers link to the right guide step or diagram.</p>
+  root.innerHTML = `<h1 class="page">Ask Bobbin</h1><p class="lead">Ask about <strong id="am">${esc(m().name)}</strong> – your question and any photo go to Bobbin only when you press Ask. Answers link to the right guide step or diagram.</p>
   <div class="chat" id="chat" aria-live="polite"></div>
   <div class="chips" id="sug">${SUGGEST.map(s => `<button class="chip" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div>
   <div class="askbox"><div id="thumb"></div><label class="sr" for="q">Your question</label><textarea id="q" placeholder="e.g. How do I attach the embroidery module?" maxlength="1000"></textarea>
   <div class="askrow"><label class="btn sec sm" for="cam" style="cursor:pointer">📷 Photo</label><input id="cam" type="file" accept="image/*" capture="environment" class="sr"><span class="grow small muted" id="hint">Optional: photograph the thread path, bobbin or stitches.</span><button class="btn" id="send">Ask</button></div></div>
-  <p class="small muted" style="margin-top:8px">AI can make mistakes – check anything important against the official manual. Photos are shrunk on your phone and not stored by the app.</p>`;
+  <p class="small muted" style="margin-top:8px">Bobbin can make mistakes, so check anything important against your manual. Photos are shrunk on your phone and not stored by the app.</p>`;
   const chat = root.querySelector('#chat'), q = root.querySelector('#q'), send = root.querySelector('#send'), thumb = root.querySelector('#thumb');
   const add = (cls, html) => { const d = document.createElement('div'); d.className = 'msg ' + cls; d.innerHTML = html; chat.appendChild(d); d.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); return d; };
   const localCards = (hits) => hits.length ? `<div class="refs">${hits.slice(0, 5).map(h => `<a href="${esc(h.link)}">${esc(h.label)}</a>`).join('')}</div>` : '';
@@ -51,21 +52,21 @@ export function mountAsk(root, ctx) {
     const hits = search(text || 'photo', m().id);
     add('u', `${preview ? `<img src="${preview}" alt="Your photo">` : ''}${esc(text || '(photo)')}`);
     q.value = ''; const img = image; image = null; preview = ''; thumb.innerHTML = '';
-    const wait = add('a', '<span class="dots"><span></span><span></span><span></span></span>');
+    const wait = add('a', ''); const stopThinking = mountThinking(wait, ASK_LINES);
     const local = () => hits.length ? `<p><strong>From the guides, diagrams and gear in this app:</strong></p>${localCards(hits)}<p class="small muted" style="margin-top:8px">${hits.slice(0, 3).map(h => `<strong>${esc(h.label)}</strong> – ${esc(h.body.slice(0, 150))}…`).join('<br>')}</p>` : '<p>I could not find a match in the app\'s guides. Try different words, or check the official manual in the Manuals tab.</p>';
-    if (!navigator.onLine) { wait.innerHTML = `<p><strong>You're offline</strong>, so AI help is paused. Here is what the app's own content says:</p>${local()}`; busy = false; send.disabled = false; return; }
+    if (!navigator.onLine) { stopThinking(); wait.innerHTML = `<p><strong>You're offline</strong>, so Bobbin can't answer right now. Here is what the app's own content says:</p>${local()}`; busy = false; send.disabled = false; return; }
     try {
       const res = await fetch('/api/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ question: text, machine: m().id, image: img ? { mime: img.mime, data: img.data } : undefined, history: history.slice(-4) }) });
       let j = null; try { j = await res.json(); } catch { /* not json: function missing */ }
-      if (res.status === 404 || !j) { wait.className = 'msg sys'; wait.innerHTML = `<strong>AI is not set up on this site.</strong> The AI function is not available here, so this is a plain search of the app's own content:${local()}`; }
-      else if (j.configured === false) { wait.className = 'msg sys'; wait.innerHTML = `<strong>AI not configured.</strong> ${esc(j.note || '')} Ask the site owner to enable Netlify AI Gateway. Meanwhile, here is what the app's own content says:${local()}`; }
+      if (res.status === 404 || !j) { wait.className = 'msg sys'; wait.innerHTML = `<strong>Bobbin isn't available on this site yet.</strong> Here is a plain search of the app's own content instead:${local()}`; }
+      else if (j.configured === false) { wait.className = 'msg sys'; wait.innerHTML = `<strong>Bobbin is resting.</strong> ${esc(j.note || '')} Meanwhile, here is what the app's own content says:${local()}`; }
       else if (!res.ok || j.error) { wait.className = 'msg sys'; wait.innerHTML = `<strong>${esc(j.error || 'Something went wrong.')}</strong>${local()}`; }
       else {
-        wait.innerHTML = formatAnswer(j.answer, j.refs) + (j.refs?.length ? '' : localCards(hits.slice(0, 3))) + (img ? '' : '');
+        wait.innerHTML = `<div class="av">${mascotSvg({ size: 28 })}<div>${formatAnswer(j.answer, j.refs)}${j.refs?.length ? '' : localCards(hits.slice(0, 3))}</div></div>`;
         history.push({ role: 'user', text }, { role: 'assistant', text: j.answer.replace(/\[\[[^\]]+\]\]/g, '') });
       }
-    } catch (e) { wait.className = 'msg sys'; wait.innerHTML = `<strong>Couldn't reach the AI.</strong> Check your connection. Here is what the app's own content says:${local()}`; }
-    busy = false; send.disabled = false; wait.scrollIntoView({ block: 'nearest' });
+    } catch (e) { wait.className = 'msg sys'; wait.innerHTML = `<strong>Couldn't reach Bobbin.</strong> Check your connection. Here is what the app's own content says:${local()}`; }
+    stopThinking(); busy = false; send.disabled = false; wait.scrollIntoView({ block: 'nearest' });
   }
   send.addEventListener('click', () => ask());
   q.addEventListener('keydown', (e) => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) ask(); });

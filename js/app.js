@@ -1,16 +1,18 @@
 import { CATS } from './content.js';
-import { MACHINES, CATALOG, GROUPS, BUILT_IDS, catalogToApp, getModel, isModel, viewsFor as viewsForId, guidesFor, allGuides, guideById, accessoriesFor, allAccessories, accessoryById, linksFor, pagesFor, fullManualUrl, pdfPageFor, hasPages } from './registry.js';
+import { MACHINES, CATALOG, GROUPS, catalogToApp, getModel, isModel, viewsFor as viewsForId, guidesFor, allGuides, guideById, accessoriesFor, allAccessories, accessoryById, linksFor, pagesFor, fullManualUrl, pdfPageFor, hasPages } from './registry.js';
 import { renderScene, footIcon, hoopIcon, needleIcon, otherIcon } from './svg.js';
-import * as Man from './manuals.js';
 import { mountAsk } from './ask.js';
+import { mountThreadViewer } from './threadviewer.js';
+import { B59_THREADING, B59_GUIDE_MAP } from './threading/b59.js';
+import { mountIdentify } from './identify.js';
+import { APP_NAME, TAGLINE, SHOP } from './config.js';
+import { mascotSvg } from './mascot.js';
 
 /* ---------- state ---------- */
 const KEY = 'ssai.v1';
 const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
 const S = Object.assign({ machine: 'b59', progress: {} }, load());
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify({ machine: S.machine, progress: S.progress })); } catch { /* private mode */ } };
-let docs = [];
-const refreshDocs = async () => { try { docs = await Man.listDocs(); } catch { docs = []; } };
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -27,8 +29,6 @@ function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.ad
 function pageLink(page, machineId = S.machine) {
   if (!page) return null;
   const pdf = pdfPageFor(machineId, page);
-  const d = docs.find(x => x.machine === machineId && x.type === 'full');
-  if (d) return { href: `#/manuals/view/${d.id}?page=${pdf}`, label: `Manual p.${page} (your copy)`, ext: false };
   const url = fullManualUrl(machineId);
   if (url) return { href: `${url}#page=${pdf}`, label: `Official manual p.${page} ↗`, ext: true };
   return null;
@@ -41,19 +41,21 @@ const ICONS = {
   manuals: '<path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3V4zM8 4v13"/>', ask: '<path d="M4 5h16v11H9l-5 4V5z"/><path d="M9 9h6M9 12h4"/>'
 };
 const ico = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[k]}</svg>`;
-const NAV = [['home', 'Home'], ['machine', 'Machine'], ['guides', 'Guides'], ['gear', 'Gear'], ['manuals', 'Manuals'], ['ask', 'Ask AI']];
+ICONS.browse = '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>';
+// [route, label, shown in the phone tab bar]. Manuals stays in the desktop sidebar and on the Browse page.
+const NAV = [['home', 'Home', 1], ['browse', 'Browse', 1], ['machine', 'Diagrams', 1], ['guides', 'Guides', 1], ['gear', 'Gear', 1], ['manuals', 'Manuals', 0], ['ask', 'Ask Bobbin', 1]];
 const iconFor = (a) => a.icon[0] === 'foot' ? footIcon(a.icon[1]) : a.icon[0] === 'hoop' ? hoopIcon(a.icon[1]) : a.icon[0] === 'needle' ? needleIcon(a.icon[1]) : otherIcon(a.icon[1]);
 const guideIcon = (g) => ({ hoop: hoopIcon('M'), thread: needleIcon('embroidery'), bobbin: otherIcon('bobbin'), sew: otherIcon('plate'), foot: footIcon('zigzag'), needle: needleIcon('universal') }[g.icon]);
 
 function buildChrome() {
   const sel = (id) => `<div class="msel"><label for="${id}">Machine</label><select id="${id}" aria-label="Machine">${MACHINES.map(m => `<option value="${m.id}"${m.id === S.machine ? ' selected' : ''}>${esc(m.name)}</option>`).join('')}</select></div>`;
-  $('#side').innerHTML = `<div class="brand"><img src="icons/icon.svg" alt=""><div>Sewing Studio AI<small>The Sewing Studio · Redruth</small></div></div>${sel('msel-side')}<nav aria-label="Main">${NAV.map(([k, l]) => `<a href="#/${k}" data-nav="${k}">${ico(k)}<span>${l}</span></a>`).join('')}</nav><div class="foot"><span id="net-state"></span><br>Your progress and uploaded manuals stay on this device.</div>`;
-  $('#top').innerHTML = `<div class="brand"><img src="icons/icon.svg" alt=""><div>Sewing Studio AI<small>Guided help for your machine</small></div></div><span id="net-pill" class="pill" hidden>Offline</span><div class="msel"><select id="msel-top" aria-label="Machine">${MACHINES.map(m => `<option value="${m.id}"${m.id === S.machine ? ' selected' : ''}>${esc(m.name)}</option>`).join('')}</select></div>`;
-  $('#tabbar').innerHTML = NAV.map(([k, l]) => `<a href="#/${k}" data-nav="${k}">${ico(k)}<span>${l.replace(' AI', '')}</span></a>`).join('');
+  $('#side').innerHTML = `<div class="brand"><img src="icons/icon.svg" alt=""><div>${esc(APP_NAME)}<small>${esc(TAGLINE)}</small></div></div>${sel('msel-side')}<nav aria-label="Main">${NAV.map(([k, l]) => `<a href="#/${k}" data-nav="${k}">${ico(k)}<span>${l}</span></a>`).join('')}</nav><div class="foot"><span id="net-state"></span><br>Your progress stays on this device.</div>`;
+  $('#top').innerHTML = `<div class="brand"><img src="icons/icon.svg" alt=""><div>${esc(APP_NAME)}<small>${esc(TAGLINE)}</small></div></div><span id="net-pill" class="pill" hidden>Offline</span><div class="msel"><select id="msel-top" aria-label="Machine">${MACHINES.map(m => `<option value="${m.id}"${m.id === S.machine ? ' selected' : ''}>${esc(m.name)}</option>`).join('')}</select></div>`;
+  $('#tabbar').innerHTML = NAV.filter(n => n[2]).map(([k, l]) => `<a href="#/${k}" data-nav="${k}">${ico(k)}<span>${l}</span></a>`).join('');
   $$('#msel-side,#msel-top').forEach(s => s.addEventListener('change', e => setMachine(e.target.value)));
 }
 function setMachine(id) { S.machine = id; save(); $$('#msel-side,#msel-top').forEach(s => { s.value = id; }); route(); }
-function netState() { const off = !navigator.onLine; const p = $('#net-pill'); if (p) { p.hidden = !off; p.classList.toggle('off', off); } const n = $('#net-state'); if (n) n.textContent = off ? 'Offline – AI help is paused' : 'Online'; }
+function netState() { const off = !navigator.onLine; const p = $('#net-pill'); if (p) { p.hidden = !off; p.classList.toggle('off', off); } const n = $('#net-state'); if (n) n.textContent = off ? 'Offline – Bobbin\'s answers are paused' : 'Online'; }
 
 /* ---------- router ---------- */
 function parse() {
@@ -64,14 +66,14 @@ let cleanup = null;
 async function route() {
   if (cleanup) { try { cleanup(); } catch { /* ignore */ } cleanup = null; }
   const r = parse();
-  const fn = { home: vHome, machine: vMachine, guides: vGuides, guide: vGuide, gear: vGear, manuals: vManuals, ask: vAsk, machines: vMachines }[r.name] || vHome;
-  const navKey = r.name === 'guide' ? 'guides' : r.name === 'machines' ? 'machine' : (fn === vHome && r.name !== 'home' ? 'home' : r.name);
+  const fn = { home: vWelcome, welcome: vWelcome, browse: vBrowse, machine: vMachine, guides: vGuides, guide: vGuide, thread: vThread, gear: vGear, manuals: vManuals, ask: vAsk, machines: vMachines }[r.name] || vWelcome;
+  const navKey = (r.name === 'guide' || r.name === 'thread') ? 'guides' : r.name === 'machines' ? 'browse' : fn === vWelcome ? 'home' : r.name;
   $$('[data-nav]').forEach(a => { if (a.dataset.nav === navKey) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   main.innerHTML = '';
   const c = await fn(r);
   if (typeof c === 'function') cleanup = c;
   if (!r.q.has('keep')) window.scrollTo(0, 0);
-  document.title = `${{ home: 'Home', machine: 'Machine diagrams', guides: 'Guides', guide: 'Guide', gear: 'Gear', manuals: 'Manuals', ask: 'Ask AI', machines: 'Browse machines' }[r.name] || 'Home'} · Sewing Studio AI`;
+  document.title = `${{ home: 'Welcome', welcome: 'Welcome', browse: 'Browse machines', machine: 'Machine diagrams', guides: 'Guides', guide: 'Guide', thread: 'Threading diagrams', gear: 'Gear', manuals: 'Manuals', ask: 'Ask Bobbin', machines: 'All machines' }[r.name] || 'Welcome'} · ${APP_NAME}`;
 }
 window.addEventListener('hashchange', route);
 
@@ -80,13 +82,71 @@ const prog = (gid) => (S.progress[gid] = S.progress[gid] || { done: {}, checks: 
 const doneCount = (g) => g.steps.filter((_, i) => prog(g.id).done[i + 1]).length;
 const pct = (g) => Math.round(100 * doneCount(g) / g.steps.length);
 
-/* ---------- Home ---------- */
-function vHome() {
+/* ---------- Welcome (landing screen) ---------- */
+const CAMERA_ICO = '<svg viewBox="0 0 48 48" aria-hidden="true" class="cam-ico"><path d="M8 15h8l3-5h10l3 5h8a2 2 0 012 2v19a2 2 0 01-2 2H8a2 2 0 01-2-2V17a2 2 0 012-2z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><circle cx="24" cy="26" r="7.5" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>';
+function vWelcome() {
+  const logoImg = (cls) => `<img class="${cls}" data-logo src="${esc(SHOP.logo)}" alt="${esc(SHOP.name)}">`;
+  main.innerHTML = `
+  <section class="welcome">
+    <div class="hero">
+      <div class="hero-mascot">${mascotSvg({ blink: true, size: 92 })}</div>
+      <h1 class="hero-title">${esc(APP_NAME)}</h1>
+      <p class="byline"><span>by</span> <a href="${esc(SHOP.url)}" target="_blank" rel="noopener" aria-label="${esc(TAGLINE)}">${logoImg('byline-logo')}</a></p>
+      <p class="hero-intro">Your pocket guide to sewing and embroidery machines. Manuals, step-by-step threading, accessories and friendly help, from ${esc(SHOP.name)}, ${esc(SHOP.address)}.</p>
+    </div>
+    <div class="cam-card">
+      <label class="cam-btn" for="wcam">${CAMERA_ICO}<span class="cam-t">Snap a machine or accessory</span><span class="cam-s">Take a photo and I'll find it in the app</span></label>
+      <input id="wcam" class="sr" type="file" accept="image/*" capture="environment">
+      <input id="wpick" class="sr" type="file" accept="image/*">
+      <p class="small muted cam-alt"><label for="wpick" class="linklike">or choose a photo you already have</label></p>
+      <div id="idres" class="idres" aria-live="polite"></div>
+    </div>
+    <div class="quick">
+      <a class="btn" href="#/browse">${ico('browse')}Browse machines</a>
+      <a class="btn sec" href="#/ask">${ico('ask')}Ask Bobbin</a>
+    </div>
+    <a class="tv-promo" href="#/thread/b59/upper/1"><span class="ico-wrap">${needleIcon('universal')}</span><span><strong>New: b59 threading diagrams</strong><br><span class="small muted">Follow the thread step by step on a line drawing, with close-ups.</span></span><span class="go" aria-hidden="true">›</span></a>
+    <footer class="wfoot">
+      <a class="foot-logo" href="${esc(SHOP.url)}" target="_blank" rel="noopener" aria-label="${esc(SHOP.name)} website">${logoImg('shop-logo-img')}</a>
+      <p>${esc(APP_NAME)} ${esc(TAGLINE)}, ${esc(SHOP.address)}</p>
+      <p class="small"><a href="${esc(SHOP.url)}" target="_blank" rel="noopener">Visit ${esc(SHOP.name)} online ›</a></p>
+      <p class="small muted">Works offline once loaded (except Bobbin's answers and photo search). Add it to your home screen from your browser menu.</p>
+    </footer>
+  </section>`;
+  // if the logo file is missing, fall back to the shop name as text rather than a broken image
+  $$('img[data-logo]', main).forEach(i => i.addEventListener('error', () => { const s = document.createElement('span'); s.className = 'logo-text'; s.textContent = SHOP.name; i.replaceWith(s); }, { once: true }));
+  return mountIdentify($('#idres', main), { inputs: ['#wcam', '#wpick'], openMachine: openIdentified, toast });
+}
+// Identify flow hands back a chosen match: open it.
+function openIdentified(m) {
+  if (m.kind === 'accessory') { location.hash = `#/gear/${encodeURIComponent(m.id)}`; return; }
+  if (m.appId) { S.machine = m.appId; save(); $$('#msel-side,#msel-top').forEach(x => { x.value = S.machine; }); location.hash = '#/machine'; return; }
+  if (m.generic) { S.machine = m.generic; save(); $$('#msel-side,#msel-top').forEach(x => { x.value = S.machine; }); location.hash = '#/machine'; return; }
+  location.hash = '#/machines';
+}
+
+/* ---------- Threading diagrams (b59) ---------- */
+function vThread(r) {
+  const cfg = B59_THREADING; // other machines: add a config like js/threading/b59.js and look it up here by r.args[0]
+  if (r.args[0] && r.args[0] !== cfg.id) { location.hash = '#/guides'; return; }
+  if (S.machine !== 'b59') { S.machine = 'b59'; save(); $$('#msel-side,#msel-top').forEach(x => { x.value = 'b59'; }); }
+  main.innerHTML = `<a class="back" href="#/guides">‹ All guides</a><h1 class="page">${esc(cfg.machineName)} · threading diagrams</h1>
+  <p class="lead">Tap Next and Back, or tap a step number. The pink line shows where the thread goes in that step; earlier steps fade back. Dashed means behind a part.</p><div id="tvroot"></div>`;
+  return mountThreadViewer($('#tvroot', main), cfg, {
+    seq: r.args[1] || 'upper', step: r.args[2],
+    onChange: (seq, n) => history.replaceState(null, '', `#/thread/${cfg.id}/${seq}/${n}?keep=1`),
+    pageLink: (pg) => aLink2(pageLink(pg, 'b59')), askHref: (q) => `#/ask?q=${encodeURIComponent(q)}`
+  });
+}
+const aLink2 = (l) => l ? { href: l.href, label: l.label } : null;
+
+/* ---------- Browse (the old home screen: pick a machine) ---------- */
+function vBrowse() {
   const m = machine(); const gs = guidesFor(S.machine);
   const inprog = gs.find(g => doneCount(g) > 0 && doneCount(g) < g.steps.length);
   const next = inprog || gs[0];
   main.innerHTML = `
-  <h1 class="page">Welcome 👋</h1><p class="lead">Manuals, machine diagrams, step-by-step setup guides, accessories and AI help – in one place.</p>
+  <h1 class="page">Browse machines</h1><p class="lead">Pick your machine, then jump to its diagrams, guides, gear and manuals.</p>
   <div class="card"><h2>Your machine</h2>
     <div class="mgrid" role="group" aria-label="Choose machine">${MACHINES.map(x => `<button class="mbtn${x.id === S.machine ? ' on' : ''}" data-m="${x.id}" aria-pressed="${x.id === S.machine}">${esc(x.name)}<small>${x.model ? esc(typeLabel(x.type)) : x.studio ? 'Used at the studio' : 'Generic layout'}</small></button>`).join('')}</div>
     <p class="small" style="margin-top:10px"><a href="#/machines">Browse all ${CATALOG.length} machines the studio stocks ›</a></p>
@@ -95,13 +155,12 @@ function vHome() {
     <a class="tile" href="#/machine">${ico('machine')}<strong>Machine diagrams</strong><span>Tap parts and controls to see what they do</span></a>
     <a class="tile" href="#/guides">${ico('guides')}<strong>Setup guides</strong><span>Threading, bobbin, foot, needle, embroidery</span></a>
     <a class="tile" href="#/gear">${ico('gear')}<strong>Feet, hoops & needles</strong><span>What each is for and how to fit it</span></a>
-    <a class="tile" href="#/manuals">${ico('manuals')}<strong>Manuals</strong><span>Official links + your own PDFs, offline</span></a>
+    <a class="tile" href="#/manuals">${ico('manuals')}<strong>Manuals</strong><span>Official manuals, checked page links</span></a>
   </div>
   ${next ? `<div class="card"><h2>${inprog ? 'Pick up where you left off' : 'Start here'}</h2>
     <div class="list"><a class="item" href="#/guide/${next.id}/${firstOpen(next)}"><span class="ico-wrap">${guideIcon(next)}</span><span class="grow"><span class="t">${esc(next.title)}</span><br><span class="d">${doneCount(next)} of ${next.steps.length} steps done · ${esc(next.time)}</span></span><span aria-hidden="true">›</span></a></div></div>` : ''}
   ${m.facts ? `<div class="card"><h2>${esc(m.name)} at a glance</h2><ul style="margin-left:18px;font-size:.88rem">${m.facts.map(f => `<li>${esc(f)}</li>`).join('')}</ul></div>` : ''}
-  <div class="card"><h2>Ask for help</h2><p class="small muted">Describe the problem or snap a photo of the thread path, needle or stitching. Answers link to the right guide step or diagram.</p><a class="btn" href="#/ask" style="margin-top:10px">Ask AI</a></div>
-  <p class="small muted" style="text-align:center;margin-top:6px">Works offline once loaded (except AI help). Install it from your browser menu: “Add to Home screen”.</p>`;
+  <div class="card"><h2>Ask for help</h2><p class="small muted">Describe the problem or snap a photo of the thread path, needle or stitching. Answers link to the right guide step or diagram.</p><a class="btn" href="#/ask" style="margin-top:10px">Ask Bobbin</a></div>`;
   main.onclick = (e) => { const b = e.target.closest('[data-m]'); if (b) setMachine(b.dataset.m); };
 }
 const TYPE_LABEL = { sewing: 'Sewing', 'sewing+embroidery': 'Sewing + embroidery', embroidery: 'Embroidery', overlocker: 'Overlocker', coverstitch: 'Coverstitch', 'overlocker+coverstitch': 'Overlocker + coverstitch' };
@@ -185,7 +244,7 @@ function detailHtml(p, view) {
   return `<div class="detail"><h3>${esc(p.name)}</h3><p>${esc(p.text)}</p><div class="links">
     ${p.go && viewsFor().find(v => v.id === p.go) ? `<a class="chip fawn" href="#/machine/${p.go}">See ${esc(viewsFor().find(v => v.id === p.go).title)} view ›</a>` : ''}
     ${g ? `<a class="chip" href="#/guide/${g.id}/${p.guide[1]}">${esc(g.title)}, step ${p.guide[1]} ›</a>` : ''}${pl}
-    <a class="chip" href="#/ask?q=${encodeURIComponent('What is the ' + p.name + ' for?')}">Ask AI</a></div></div>`;
+    <a class="chip" href="#/ask?q=${encodeURIComponent('What is the ' + p.name + ' for?')}">Ask Bobbin</a></div></div>`;
 }
 
 /* ---------- Guides ---------- */
@@ -193,6 +252,7 @@ function vGuides() {
   const gs = guidesFor(S.machine); const all = allGuides();
   const hidden = all.filter(g => !gs.includes(g));
   main.innerHTML = `<h1 class="page">Setup guides</h1><p class="lead">Step-by-step with a diagram, a checklist and a “mark done” state for each step. Progress is saved on this device.</p>
+  ${isB59() ? `<a class="tv-promo" href="#/thread/b59/upper/1"><span class="ico-wrap">${needleIcon('universal')}</span><span><strong>Threading diagrams</strong><br><span class="small muted">Upper thread, needle threader, bobbin winding and bobbin insertion on a line drawing, with close-ups.</span></span><span class="go" aria-hidden="true">›</span></a>` : ''}
   <div class="card list">${gs.map(g => `<a class="item" href="#/guide/${g.id}/${firstOpen(g)}"><span class="ico-wrap">${guideIcon(g)}</span><span class="grow"><span class="t">${esc(g.title)}</span> ${g.machines.length === 1 ? '<span class="badge fawn">b59</span>' : ''}<br><span class="d">${esc(g.intro)}</span><div class="bar" style="margin-top:7px"><i style="width:${pct(g)}%"></i></div><span class="d">${doneCount(g)}/${g.steps.length} done · ${esc(g.time)}</span></span><span aria-hidden="true">›</span></a>`).join('')}</div>
   ${hidden.length ? `<div class="tip">${hidden.map(g => esc(g.title)).join(', ')} ${hidden.length > 1 ? 'are' : 'is'} written for the Bernette b59 only. Switch machine to see ${hidden.length > 1 ? 'them' : 'it'}.</div>` : ''}
   ${gs.some(g => doneCount(g)) ? `<button class="btn ghost" id="reset" style="margin-top:10px">Reset all progress</button>` : ''}`;
@@ -218,6 +278,7 @@ function vGuide(r) {
     <h1 class="page">${esc(g.title)}</h1>
     ${isModel(S.machine) ? `<div class="tip" style="margin:0 0 10px">Written for the ${esc(m.name)} from the maker's manual and product page. Drawings are simplified${getModel(S.machine).manual ? '; page links were checked against the PDF' : '; the maker\'s PDF could not be read automatically, so check details against your own manual'}.</div>` : ''}
     ${generic ? `<div class="tip" style="margin:0 0 10px">Written for the Bernette b59. Other machines work on the same principles, but positions and button names differ – check your own manual (Manuals tab).</div>` : ''}
+    ${isB59() && B59_GUIDE_MAP[g.id] ? `<a class="tv-promo" style="margin:0 0 10px;padding:10px 12px" href="#/thread/b59/${B59_GUIDE_MAP[g.id][Math.min(step, B59_GUIDE_MAP[g.id].length) - 1].join('/')}"><span><strong>Follow the thread on the new diagram</strong><br><span class="small muted">Line drawing with numbered steps and close-ups.</span></span><span class="go" aria-hidden="true">›</span></a>` : ''}
     <div class="row" style="margin-bottom:8px"><div class="grow"><div class="bar"><i style="width:${pct(g)}%"></i></div></div><span class="small muted">${dc}/${g.steps.length} done</span></div>
     <div class="steps" role="group" aria-label="Steps">${g.steps.map((x, i) => `<button data-step="${i + 1}" class="${p.done[i + 1] ? 'done' : ''}${i + 1 === step ? ' cur' : ''}" aria-label="Step ${i + 1}${p.done[i + 1] ? ' (done)' : ''}: ${esc(x.t)}" aria-current="${i + 1 === step}">${p.done[i + 1] ? '✓' : i + 1}</button>`).join('')}</div>
     <div class="two"><div class="stepside card" style="padding:8px">${stepsList}${dc ? '<button class="btn ghost sm" id="greset" style="margin-top:6px">Reset this guide</button>' : ''}</div>
@@ -228,7 +289,7 @@ function vGuide(r) {
       <p style="margin-top:12px;font-size:.92rem">${esc(s.b)}</p>
       ${s.warn ? `<div class="warn"><strong>Careful:</strong> ${esc(s.warn)}</div>` : ''}${s.tip ? `<div class="tip"><strong>Tip:</strong> ${esc(s.tip)}</div>` : ''}
       <ul class="checks" aria-label="Checklist">${checks.map((c, k) => `<li><label class="${p.checks[step + '.' + k] ? 'on' : ''}"><input type="checkbox" data-c="${step}.${k}"${p.checks[step + '.' + k] ? ' checked' : ''}><span>${esc(c)}</span></label></li>`).join('')}</ul>
-      <div class="links">${viewLink ? `<a class="chip fawn" href="${viewLink}">Find it on the diagram ›</a>` : ''}${pl}${gear.map(a => `<a class="chip" href="#/gear/${a.id}">${esc(a.name)}</a>`).join('')}<a class="chip" href="#/ask?q=${encodeURIComponent('Help with ' + g.title + ', step ' + step + ': ' + s.t)}">Ask AI about this step</a></div>
+      <div class="links">${viewLink ? `<a class="chip fawn" href="${viewLink}">Find it on the diagram ›</a>` : ''}${pl}${gear.map(a => `<a class="chip" href="#/gear/${a.id}">${esc(a.name)}</a>`).join('')}<a class="chip" href="#/ask?q=${encodeURIComponent('Help with ' + g.title + ', step ' + step + ': ' + s.t)}">Ask Bobbin about this step</a></div>
       <div class="stepnav"><button class="btn sec" data-a="prev"${step === 1 ? ' disabled' : ''}>‹ Back</button><button class="btn ${p.done[step] ? 'sec' : ''}" data-a="done">${p.done[step] ? 'Undo done' : '✓ Mark done'}</button><button class="btn sec" data-a="next"${step === g.steps.length ? ' disabled' : ''}>Next ›</button></div>
       ${dc === g.steps.length ? `<div class="tip" style="margin-top:12px"><strong>All steps done 🎉</strong> You can reset this guide any time.</div>` : (checks.length && checks.some((_, k) => !p.checks[step + '.' + k]) && !p.done[step] ? '' : '')}
     </div></div>`;
@@ -283,56 +344,23 @@ function gearDetail(a) {
   ${sc ? `<h3 class="h2" style="margin-top:14px">Fitting diagram</h3>${renderScene(sc[0], { ...sc[1], label: 'Fitting diagram for ' + a.name }).svg}` : ''}
   <h3 class="h2" style="margin-top:14px">How to fit it</h3><ol class="fit">${a.fit.map(f => `<li>${esc(f)}</li>`).join('')}</ol>
   ${a.tip ? `<div class="tip"><strong>Tip:</strong> ${esc(a.tip)}</div>` : ''}
-  <div class="links">${g ? `<a class="chip" href="#/guide/${g.id}/${a.guide[1]}">${esc(g.title)}, step ${a.guide[1]} ›</a>` : ''}${pl}<a class="chip" href="#/ask?q=${encodeURIComponent('When should I use the ' + a.name + '?')}">Ask AI</a></div></div>`;
+  <div class="links">${g ? `<a class="chip" href="#/guide/${g.id}/${a.guide[1]}">${esc(g.title)}, step ${a.guide[1]} ›</a>` : ''}${pl}<a class="chip" href="#/ask?q=${encodeURIComponent('When should I use the ' + a.name + '?')}">Ask Bobbin</a></div></div>`;
 }
 
-/* ---------- Manuals ---------- */
-let viewer = null;
-async function vManuals(r) {
-  await refreshDocs();
-  if (r.args[0] === 'view') return vViewer(r);
+/* ---------- Manuals (official links only) ---------- */
+function vManuals() {
   const links = linksFor(S.machine); const m = machine(); const pages = pagesFor(S.machine);
-  const mine = docs.filter(d => d.machine === S.machine); const others = docs.filter(d => d.machine !== S.machine);
-  const want = parseInt(r.q.get('page'));
-  const full = docs.find(d => d.machine === S.machine && d.type === 'full');
-  if (want && hasPages(S.machine) && full) { location.replace(`#/manuals/view/${full.id}?page=${want}`); return; }
-  main.innerHTML = `<h1 class="page">Manuals</h1><p class="lead">Official manuals for ${esc(m.name)}, plus your own PDF copy that works offline.</p>
-  ${want && fullManualUrl(S.machine) ? `<div class="tip" style="margin:0 0 12px">You haven't uploaded the ${esc(shortName(m))} manual yet, so here's the official PDF at PDF page ${want}: ${aLink({ href: `${fullManualUrl(S.machine)}#page=${want}`, label: 'Open PDF page ' + want + ' ↗', ext: true }, 'chip fawn')}. Upload it below to read it inside the app.</div>` : ''}
+  main.innerHTML = `<h1 class="page">Manuals</h1><p class="lead">Official manuals for ${esc(m.name)}, straight from the maker.</p>
   <div class="card"><h2>Official manuals</h2><div class="list">${links.map(l => `<a class="item" href="${esc(l.url)}" target="_blank" rel="noopener"><span class="ico-wrap"><strong class="small" style="color:var(--tealD)">${l.kind}</strong></span><span class="grow"><span class="t">${esc(l.title)}</span><br><span class="d">${esc(l.note)}${l.blocked ? ' <strong>Link not auto-checked</strong> (the site blocks bots).' : ''}</span></span><span aria-hidden="true">↗</span></a>`).join('')}</div>
   <p class="small muted" style="margin-top:8px">Links open the maker's own site. Manuals are copyrighted, so the app links to them rather than copying them.</p></div>
-  <div class="card"><h2>Your manuals (stored on this device)</h2>
-    ${mine.length ? `<div class="list">${mine.map(d => docRow(d)).join('')}</div>` : `<p class="small muted">Nothing uploaded for ${esc(m.name)} yet. Download the PDF from the link above, then add it here to read it inside the app – with page jumping – even without internet.</p>`}
-    ${others.length ? `<details style="margin-top:8px"><summary class="small">Other machines (${others.length})</summary><div class="list">${others.map(d => docRow(d)).join('')}</div></details>` : ''}
-    <form id="up" style="margin-top:14px"><div class="field"><label for="pdf">Add a PDF manual</label><input id="pdf" type="file" accept="application/pdf,.pdf" required></div>
-      <div class="row"><div class="field grow"><label for="um">Machine</label><select id="um">${MACHINES.map(x => `<option value="${x.id}"${x.id === S.machine ? ' selected' : ''}>${esc(x.name)}</option>`).join('')}</select></div>
-      <div class="field grow"><label for="ut">Type</label><select id="ut"><option value="full">Full user manual</option><option value="qsg">Quick start guide</option><option value="other">Other</option></select></div></div>
-      <button class="btn" type="submit">Save to this device</button><p class="small muted" id="upmsg" role="status" style="margin-top:8px"></p></form></div>
-  ${pages.length ? `<div class="card"><h2>Where to look in the ${esc(shortName(m))} manual</h2><p class="small muted">${isB59() ? 'Page numbers for the English 2026-03 edition – other editions may shift by a page or two.' : `Printed page numbers in the ${esc(getModel(S.machine).manual.edition)} edition. Each one was checked against the PDF text; other editions may shift by a page or two.`}</p><table class="pages">${pages.map(t => { const l = pageLink(t.page); return `<tr><td>${esc(t.topic)}</td><td>${aLink(l ? { ...l, label: 'p.' + t.page + (l.ext ? ' ↗' : ' →') } : null, 'chip')}</td></tr>`; }).join('')}</table></div>` : ''}`;
-  main.onsubmit = async (e) => {
-    e.preventDefault(); const msg = $('#upmsg'); const f = $('#pdf').files[0]; msg.textContent = 'Saving…';
-    try { await Man.addDoc(f, { machine: $('#um').value, type: $('#ut').value }); toast('Manual saved on this device'); vManuals({ args: [], q: new URLSearchParams() }); } catch (err) { msg.textContent = err.message || 'Could not save that file.'; }
-  };
-  main.onclick = async (e) => { const b = e.target.closest('[data-del]'); if (b && confirm('Remove this manual from the device?')) { await Man.deleteDoc(b.dataset.del); toast('Removed'); vManuals({ args: [], q: new URLSearchParams() }); } };
+  ${pages.length ? `<div class="card"><h2>Where to look in the ${esc(shortName(m))} manual</h2><p class="small muted">${isB59() ? 'Page numbers for the English 2026-03 edition – other editions may shift by a page or two.' : `Printed page numbers in the ${esc(getModel(S.machine).manual.edition)} edition. Each one was checked against the PDF text; other editions may shift by a page or two.`}</p><table class="pages">${pages.map(t => { const l = pageLink(t.page); return `<tr><td>${esc(t.topic)}</td><td>${aLink(l ? { ...l, label: 'p.' + t.page + ' ↗' } : null, 'chip')}</td></tr>`; }).join('')}</table></div>` : ''}`;
 }
-const docRow = (d) => `<div class="item"><span class="ico-wrap"><strong class="small" style="color:var(--tealD)">PDF</strong></span><a class="grow" href="#/manuals/view/${d.id}" style="text-decoration:none;color:inherit"><span class="t">${esc(d.name)}</span><br><span class="d">${esc(MACHINES.find(m => m.id === d.machine)?.name || '')} · ${({ full: 'Full manual', qsg: 'Quick start', other: 'Other' })[d.type]} · ${(d.size / 1048576).toFixed(1)} MB · last read p.${d.lastPage || 1}</span></a><button class="btn ghost sm" data-del="${d.id}" aria-label="Remove ${esc(d.name)}">Remove</button></div>`;
-async function vViewer(r) {
-  const d = docs.find(x => x.id === r.args[1]); if (!d) { location.hash = '#/manuals'; return; }
-  const topics = d.type === 'full' ? pagesFor(d.machine) : [];
-  main.innerHTML = `<a class="back" href="#/manuals">‹ Manuals</a><h1 class="page" style="font-size:1.1rem">${esc(d.name)}</h1>
-  ${topics.length ? `<div class="chips" aria-label="Jump to topic">${topics.map(t => `<button class="chip" data-p="${t.pdfPage || t.page}">${esc(t.topic.replace(/ \(.*\)/, ''))} · ${t.page}</button>`).join('')}</div>` : ''}
-  <div id="vmount"><p class="empty">Loading the viewer…</p></div>`;
-  try {
-    viewer = await Man.mountViewer($('#vmount'), d, parseInt(r.q.get('page')) || d.lastPage || 1);
-    main.onclick = (e) => { const b = e.target.closest('[data-p]'); if (b) { viewer.goto(+b.dataset.p); $('#vmount').scrollIntoView({ block: 'start', behavior: 'smooth' }); } };
-  } catch (e) { $('#vmount').innerHTML = `<div class="warn">${esc(e.message)}</div>`; }
-  return () => { viewer?.destroy(); viewer = null; };
-}
-
 
 /* ---------- Browse machines ---------- */
 let mQ = '', mBrand = 'all', mGroup = 'all';
 const GENERIC_FOR = { Brother: 'brother', Bernina: 'bernina', Janome: 'janome' };
 function vMachines() {
+  const BUILT_COUNT = CATALOG.filter(c => catalogToApp(c.id)).length; // computed from the registry, never hard-coded
   const brands = [...new Set(CATALOG.map(c => c.brand))].sort((a, b) => a.localeCompare(b));
   const rows = () => CATALOG.filter(c => (mBrand === 'all' || c.brand === mBrand) && (mGroup === 'all' || c.group === mGroup) && (!mQ || `${c.brand} ${c.model} ${typeLabel(c.type)}`.toLowerCase().includes(mQ.toLowerCase())));
   const card = (c) => {
@@ -340,7 +368,7 @@ function vMachines() {
     return `<div class="item mrow" data-cid="${esc(c.id)}"><span class="grow"><span class="t">${esc(c.brand)} ${esc(c.model)}</span><br><span class="d">${esc(typeLabel(c.type))}${aid ? ' · <span class="badge">Breakdown ready</span>' : ' · <span class="badge grey">Not built yet</span>'}</span></span>
       <span class="mact">${aid ? `<button class="btn sm${sel ? ' sec' : ''}" data-pick="${esc(aid)}">${sel ? 'Selected' : 'Open'}</button>` : `${GENERIC_FOR[c.brand] ? `<button class="btn sm sec" data-pick="${GENERIC_FOR[c.brand]}" title="Typical ${esc(c.brand)} layout">Generic layout</button>` : ''}`}<a class="chip" href="${esc(c.url)}" target="_blank" rel="noopener" aria-label="Shop page for ${esc(c.brand)} ${esc(c.model)}">Shop ↗</a></span></div>`;
   };
-  main.innerHTML = `<h1 class="page">All machines</h1><p class="lead">Every sewing, embroidery and overlocker model The Sewing Studio lists – ${CATALOG.length} in all. ${BUILT_IDS.size - 1} have their own breakdown so far; the rest are being added in batches.</p>
+  main.innerHTML = `<h1 class="page">All machines</h1><p class="lead">Every sewing, embroidery and overlocker model The Sewing Studio lists – ${CATALOG.length} in all. ${BUILT_COUNT} have their own breakdown so far; the rest are being added in batches.</p>
   <input class="search" id="mq" type="search" placeholder="Search brand or model…" value="${esc(mQ)}" aria-label="Search machines">
   <div class="chips" role="group" aria-label="Type">${GROUPS.map(([k, l]) => `<button class="chip" data-g="${k}" aria-pressed="${mGroup === k}">${l}</button>`).join('')}</div>
   <div class="chips" role="group" aria-label="Brand"><button class="chip" data-b="all" aria-pressed="${mBrand === 'all'}">All brands</button>${brands.map(b => `<button class="chip" data-b="${esc(b)}" aria-pressed="${mBrand === b}">${esc(b)}</button>`).join('')}</div>
@@ -356,10 +384,10 @@ function vMachines() {
 }
 
 /* ---------- Ask ---------- */
-function vAsk(r) { return mountAsk(main, { machine: () => machine(), isB59, initial: r.q.get('q') || '', docs: () => docs }); }
+function vAsk(r) { return mountAsk(main, { machine: () => machine(), isB59, initial: r.q.get('q') || '' }); }
 
 /* ---------- boot ---------- */
 buildChrome();
 netState(); addEventListener('online', netState); addEventListener('offline', netState);
-refreshDocs().then(route);
+route();
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => { /* offline support is optional */ });
