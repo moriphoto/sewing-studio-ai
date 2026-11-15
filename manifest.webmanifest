@@ -1,15 +1,18 @@
 {
-  "name": "Sewing Studio AI",
-  "short_name": "Sewing AI",
-  "description": "Manuals, machine diagrams, setup guides and AI help for sewing and embroidery machines.",
+  "name": "Bobbin",
+  "short_name": "Bobbin",
+  "description": "Bobbin by The Sewing Studio: manuals, machine diagrams, threading and setup guides, and friendly help for sewing and embroidery machines.",
   "start_url": "./#/home",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#EDE8EB",
+  "background_color": "#F4F2F1",
   "theme_color": "#008080",
   "icons": [
     { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
