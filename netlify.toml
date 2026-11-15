@@ -1,4 +1,5 @@
 [build]
+  command = "node tools/decode-assets.mjs"
   publish = "."
 
 [functions]
