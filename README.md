@@ -19,7 +19,7 @@ Everything except Bobbin's answers and photo search works **offline** (service w
 **Home** is a welcome page (`#/`) with a camera button: the photo is shrunk to ~1024px on the phone, sent to `/api/identify`, and the top 2–3 matches from the registry are shown to confirm. **Browse** (`#/browse`) is the machine picker. The b59 threading viewer is at `#/thread/b59/upper/1`.
 
 ### Where Bobbin's answers come from (developer note)
-Both `/api/ask` and `/api/identify` pick a provider in `netlify/lib/ai.ts`: if the **`GEMINI_API_KEY`** environment variable is set, Gemini Flash-Lite (model id `gemini-3.5-flash-lite`, override with `SSAI_GEMINI_MODEL`) is called over plain REST; otherwise the Netlify AI Gateway is used as before; with neither, the app falls back to local search.
+Both `/api/ask` and `/api/identify` pick a provider in `netlify/lib/ai.ts`: the **Netlify AI Gateway** is the default (no key to manage; Netlify injects it). Gemini Flash-Lite (model id `gemini-3.5-flash-lite`, override with `SSAI_GEMINI_MODEL`) is called over plain REST only when **both** `SSAI_AI_PROVIDER=gemini` and `GEMINI_API_KEY` are set. A `GEMINI_API_KEY` on its own is ignored. If the gateway isn't available the app falls back to local search.
 
 ### Name, logo, colours, icons
 - The name and tagline live in `APP_NAME` / `TAGLINE` in `js/config.js` (the static `<title>` and meta description in `index.html`, and `manifest.webmanifest`, keep their own copy).
