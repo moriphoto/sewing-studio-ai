@@ -1,7 +1,7 @@
 // Shared helpers for the AI functions (ask.mts, identify.mts).
-//  - GEMINI_API_KEY set  -> Google Gemini Flash-Lite through the plain REST API (no extra package).
-//  - otherwise           -> the Netlify AI Gateway (Anthropic SDK, key injected by Netlify) exactly as before.
-//  - neither             -> the functions answer { configured: false } and the app falls back to local search.
+//  - SSAI_AI_PROVIDER=gemini AND GEMINI_API_KEY set -> Google Gemini Flash-Lite through the plain REST API (no extra package).
+//  - otherwise (the default)  -> the Netlify AI Gateway (Anthropic SDK, key injected by Netlify). A GEMINI_API_KEY on its own is ignored.
+//  - gateway not available    -> the functions answer { configured: false } and the app falls back to local search.
 import Anthropic from '@anthropic-ai/sdk';
 
 export const env = (k: string): string | undefined => {
@@ -57,9 +57,10 @@ export type Provider = { client: any; models: string[]; name: 'gemini' | 'gatewa
 export function pickProvider(deps: { client?: any; fetch?: typeof fetch } = {}): Provider {
   const override = env('SSAI_MODEL');
   if (deps.client) return { client: deps.client, models: (override ? [override] : []).concat(GATEWAY_MODELS), name: 'injected' };
-  const gk = env('GEMINI_API_KEY');
+  // Gemini is opt-in: both the switch and the key are needed. A stray GEMINI_API_KEY alone never changes the provider.
+  const gk = env('SSAI_AI_PROVIDER') === 'gemini' ? env('GEMINI_API_KEY') : undefined;
   if (gk) { const gm = env('SSAI_GEMINI_MODEL'); return { client: geminiClient(gk, deps.fetch), models: (gm ? [gm] : []).concat(GEMINI_MODELS.filter((m) => m !== gm)), name: 'gemini' }; }
   if (env('ANTHROPIC_API_KEY')) return { client: new Anthropic(), models: (override ? [override] : []).concat(GATEWAY_MODELS), name: 'gateway' };
   return null;
 }
-export const authMessage = (p: Provider) => p && p.name === 'gemini' ? 'The Gemini API key was not accepted. Check GEMINI_API_KEY in the Netlify environment variables.' : 'The AI Gateway did not accept the request – AI may be turned off for this site.';
+export const authMessage = (p: Provider) => p && p.name === 'gemini' ? 'The Gemini API key was not accepted. Check GEMINI_API_KEY in the Netlify environment variables, or remove SSAI_AI_PROVIDER to use the AI Gateway.' : 'The AI Gateway did not accept the request – AI may be turned off for this site.';

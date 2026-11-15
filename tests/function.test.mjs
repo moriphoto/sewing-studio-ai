@@ -49,7 +49,7 @@ await build({ entryPoints: ['netlify/functions/identify.mts'], bundle: true, pla
 const idMod = await import(pathToFileURL('/tmp/' + idOut).href + '?t=' + Date.now());
 const idPost = (b) => new Request('http://x/api/identify', { method: 'POST', body: JSON.stringify(b), headers: { 'content-type': 'application/json' } });
 const photo = { mime: 'image/jpeg', data: 'AAAA' };
-delete process.env.ANTHROPIC_API_KEY; delete process.env.GEMINI_API_KEY;
+delete process.env.ANTHROPIC_API_KEY; delete process.env.GEMINI_API_KEY; delete process.env.SSAI_AI_PROVIDER;
 r = await idMod.handle(idPost({ image: photo })); j = await r.json();
 assert.equal(r.status, 200); assert.equal(j.configured, false, 'no key + no gateway -> not configured');
 r = await idMod.handle(idPost({})); assert.equal(r.status, 400);
@@ -66,8 +66,21 @@ assert.equal(seen.messages[0].content[0].type, 'image'); assert.ok(seen.system.i
 r = await idMod.handle(idPost({ image: photo }), { client: idStub('not json at all') }); assert.equal(r.status, 502);
 r = await idMod.handle(idPost({ image: photo }), { client: idStub(JSON.stringify({ seen: 'a cat', kind: 'other', items: [] })) }); j = await r.json();
 assert.deepEqual(j.matches, []);
-// Gemini path: GEMINI_API_KEY switches provider, plain REST with the key in a header, vision parts + JSON mode
-process.env.GEMINI_API_KEY = 'test-key';
+// Provider switch: a GEMINI_API_KEY alone is ignored; Gemini needs SSAI_AI_PROVIDER=gemini as well
+{
+  const lib = await import('../netlify/lib/ai.ts');
+  process.env.GEMINI_API_KEY = 'test-key';
+  assert.equal(lib.pickProvider(), null, 'key alone, no gateway -> nothing configured (key ignored)');
+  process.env.ANTHROPIC_API_KEY = 'gw'; assert.equal(lib.pickProvider().name, 'gateway', 'key alone -> gateway');
+  process.env.SSAI_AI_PROVIDER = 'other'; assert.equal(lib.pickProvider().name, 'gateway', 'unknown provider value -> gateway');
+  process.env.SSAI_AI_PROVIDER = 'gemini'; assert.equal(lib.pickProvider().name, 'gemini', 'switch + key -> gemini');
+  delete process.env.GEMINI_API_KEY; assert.equal(lib.pickProvider().name, 'gateway', 'switch without key -> gateway');
+  delete process.env.ANTHROPIC_API_KEY; assert.equal(lib.pickProvider(), null);
+  delete process.env.SSAI_AI_PROVIDER;
+  console.log('provider switch tests passed');
+}
+// Gemini path: SSAI_AI_PROVIDER=gemini + GEMINI_API_KEY switch provider, plain REST with the key in a header, vision parts + JSON mode
+process.env.SSAI_AI_PROVIDER = 'gemini'; process.env.GEMINI_API_KEY = 'test-key';
 const calls = [];
 const gfetch = async (url, init) => { calls.push({ url: String(url), init, body: JSON.parse(init.body) });
   return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify({ seen: 'x', kind: 'machine', items: [{ key: 'm:bernette-b59', name: 'b59', confidence: 0.9 }] }) }] } }] }), { status: 200 }); };
@@ -93,5 +106,5 @@ assert.equal(j.configured, false); assert.ok(/GEMINI_API_KEY/.test(j.detail)); a
 // thinking-setting rejected -> retried without it
 let n2 = 0; const think = async (url, init) => { n2++; const b = JSON.parse(init.body); if (b.generationConfig.thinkingConfig) return new Response('{"error":{"message":"thinking_level is not supported"}}', { status: 400 }); return new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text: 'fine' }] } }] }), { status: 200 }); };
 r = await mod.handle(post({ question: 'zipper?' }), { fetch: think }); j = await r.json(); assert.equal(j.answer, 'fine'); assert.equal(n2, 2);
-delete process.env.GEMINI_API_KEY;
+delete process.env.GEMINI_API_KEY; delete process.env.SSAI_AI_PROVIDER;
 console.log('gemini + identify tests passed');

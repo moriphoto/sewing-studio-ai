@@ -1,5 +1,5 @@
 // POST /api/identify – "what is this?" for a photo of a sewing machine or accessory.
-// A vision model (Gemini Flash-Lite when GEMINI_API_KEY is set, otherwise the Netlify AI Gateway, see netlify/lib/ai.ts)
+// A vision model (Gemini Flash-Lite only when SSAI_AI_PROVIDER=gemini and GEMINI_API_KEY are set, otherwise the Netlify AI Gateway, see netlify/lib/ai.ts)
 // is shown the photo plus the app's own list of machines and accessories, and answers with JSON. The answer is then
 // matched against the registry on the server so the app only ever offers things it really has.
 import { json, pickProvider, authMessage } from '../lib/ai.ts';

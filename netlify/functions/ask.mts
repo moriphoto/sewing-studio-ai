@@ -1,6 +1,6 @@
 // POST /api/ask – answers sewing questions with an AI model.
-// Provider (see netlify/lib/ai.ts): if the GEMINI_API_KEY environment variable is set, Gemini Flash-Lite is used;
-// otherwise the Netlify AI Gateway, which injects ANTHROPIC_API_KEY / ANTHROPIC_BASE_URL at runtime.
+// Provider (see netlify/lib/ai.ts): Gemini Flash-Lite only when SSAI_AI_PROVIDER=gemini and GEMINI_API_KEY are both set;
+// otherwise (the default) the Netlify AI Gateway, which injects ANTHROPIC_API_KEY / ANTHROPIC_BASE_URL at runtime.
 // If neither is available the function answers { configured: false } and the app falls back to local search.
 import { env, json, pickProvider, authMessage } from '../lib/ai.ts';
 import { search, machineName, knownMachine, machineKind, machineFacts } from '../../js/search.js';
