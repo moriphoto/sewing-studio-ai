@@ -1,5 +1,5 @@
 // Local keyword search over the in-app content. Shared by the browser (offline fallback)
-// and by the Netlify Function (to ground the AI answer). Pure JS, no DOM.
+// and by the Netlify Function (to ground the answer). Pure JS, no DOM.
 import { VIEWS } from './content.js';
 import { MODELS } from './machines/index.js';
 import { MACHINES, allGuides, viewsFor, allAccessories, linksFor, pagesFor, isModel } from './registry.js';
@@ -80,7 +80,7 @@ export function resolveRef(id) {
   return it ? { id, link: it.link, label: it.label } : null;
 }
 
-// What the AI function needs to know about the selected machine.
+// What the function needs to know about the selected machine.
 export const knownMachine = (id) => MACHINES.some(m => m.id === id);
 export const machineKind = (id) => (id === 'b59' ? 'b59' : isModel(id) ? 'model' : 'generic');
 export function machineFacts(id) {

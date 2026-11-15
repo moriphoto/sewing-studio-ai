@@ -1,4 +1,4 @@
-// Original, schematic SVG scenes for Sewing Studio AI.
+// Original, schematic SVG scenes for Bobbin.
 // Every scene returns { vb:[w,h], svg, anchors }. Parts carry data-part="id" so a step
 // can highlight them, and the hotspot layer in app.js can sit on top of them.
 // Drawings are simplified and not to scale; they are NOT traced from any manual.
