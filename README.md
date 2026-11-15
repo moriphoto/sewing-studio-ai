@@ -25,7 +25,7 @@ Both `/api/ask` and `/api/identify` pick a provider in `netlify/lib/ai.ts`: the 
 - The name and tagline live in `APP_NAME` / `TAGLINE` in `js/config.js` (the static `<title>` and meta description in `index.html`, and `manifest.webmanifest`, keep their own copy).
 - Customer-facing wording never says "AI": the helper is just **Bobbin**. Internal names (`GEMINI_API_KEY`, `/api/ask`, `netlify/lib/ai.ts`) stay as they are.
 - The shop logo is `SHOP.logo` (`assets/sewing-studio-logo.webp`). Put the original in `assets/sewing-studio-logo.jpg` and run `python3 tools/prepare-logo.py`: it removes the grey background, writes the webp and png, and prints the logo's thread colour for reference (the app keeps its original teal blue `#008080`, set in `--teal` in `css/app.css` and `TEAL` in `tools/make-icons.mjs`). Until the file exists the app shows the shop name as text.
-- The mascot (`js/mascot.js`) is the loading state, the answer avatar and the app icon. `node tools/make-icons.mjs` rebuilds `icons/*` from it.
+- The mascot (`js/mascot.js`) is the loading state, the answer avatar and the app icon. `node tools/make-icons.mjs` rebuilds `icons/*` (and the root `favicon.ico`) from it: the full character for home-screen icons, and a simplified bold-face drawing for the 16px/32px favicon so it stays readable in a browser tab.
 
 ## Manuals and copyright
 
