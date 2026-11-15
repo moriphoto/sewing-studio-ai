@@ -75,6 +75,11 @@ assert.deepEqual(j.matches, []);
   process.env.SSAI_AI_PROVIDER = 'other'; assert.equal(lib.pickProvider().name, 'gateway', 'unknown provider value -> gateway');
   process.env.SSAI_AI_PROVIDER = 'gemini'; assert.equal(lib.pickProvider().name, 'gemini', 'switch + key -> gemini');
   delete process.env.GEMINI_API_KEY; assert.equal(lib.pickProvider().name, 'gateway', 'switch without key -> gateway');
+  // the gateway client must not send the Gemini-only `json` hint (Anthropic: "json: Extra inputs are not permitted")
+  process.env.ANTHROPIC_API_KEY = 'gw'; const realFetch = globalThis.fetch; let sent = null;
+  globalThis.fetch = async (u, init) => { sent = JSON.parse(init.body); return new Response(JSON.stringify({ id: 'x', type: 'message', role: 'assistant', model: 'm', content: [{ type: 'text', text: '{}' }], stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 } }), { status: 200, headers: { 'content-type': 'application/json' } }); };
+  try { await lib.pickProvider().client.messages.create({ model: 'm', max_tokens: 5, messages: [{ role: 'user', content: 'hi' }], json: true }); } finally { globalThis.fetch = realFetch; }
+  assert.ok(sent && !('json' in sent), 'gateway request body has no json field');
   delete process.env.ANTHROPIC_API_KEY; assert.equal(lib.pickProvider(), null);
   delete process.env.SSAI_AI_PROVIDER;
   console.log('provider switch tests passed');

@@ -60,7 +60,9 @@ export function pickProvider(deps: { client?: any; fetch?: typeof fetch } = {}):
   // Gemini is opt-in: both the switch and the key are needed. A stray GEMINI_API_KEY alone never changes the provider.
   const gk = env('SSAI_AI_PROVIDER') === 'gemini' ? env('GEMINI_API_KEY') : undefined;
   if (gk) { const gm = env('SSAI_GEMINI_MODEL'); return { client: geminiClient(gk, deps.fetch), models: (gm ? [gm] : []).concat(GEMINI_MODELS.filter((m) => m !== gm)), name: 'gemini' }; }
-  if (env('ANTHROPIC_API_KEY')) return { client: new Anthropic(), models: (override ? [override] : []).concat(GATEWAY_MODELS), name: 'gateway' };
+  // `json: true` is a hint only the Gemini client understands (JSON mode); the Anthropic API rejects unknown fields ("json: Extra inputs are not permitted"), so drop it.
+  const gateway = () => { const c: any = new Anthropic(); return { messages: { create: (a: any) => { const { json: _j, ...rest } = a || {}; return c.messages.create(rest); } } }; };
+  if (env('ANTHROPIC_API_KEY')) return { client: gateway(), models: (override ? [override] : []).concat(GATEWAY_MODELS), name: 'gateway' };
   return null;
 }
 export const authMessage = (p: Provider) => p && p.name === 'gemini' ? 'The Gemini API key was not accepted. Check GEMINI_API_KEY in the Netlify environment variables, or remove SSAI_AI_PROVIDER to use the AI Gateway.' : 'The AI Gateway did not accept the request – AI may be turned off for this site.';
